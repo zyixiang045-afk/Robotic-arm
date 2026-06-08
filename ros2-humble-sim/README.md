@@ -118,6 +118,11 @@ source install/setup.bash
 - `docs/ROS2_FUNCTION_TEST_PLAN.zh-CN.md`：基础功能测试计划。
 - `docs/DEPLOYMENT.md`：部署说明与后续 Docker 镜像路径。
 
+## 在liunx系统中配置codex与claude
+
+按照教程https://docs.right.codes/docs/rc_cli_config/wsl.html即可
+推荐使用ccswitch导入配置文件
+
 ## Docker 镜像
 
 Docker 不是当前本地开发的主要方式，只保留给后续团队服务器或统一镜像使用。
