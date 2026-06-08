@@ -4,3 +4,5 @@
 
 *服务器还在准备中
 当然我们也一样*
+
+比赛的相关信息在Competition information中更新
