@@ -200,7 +200,6 @@ code ~/.codex/config.toml
 保存后重启 VS Code WSL 窗口或 Codex。
 
 说明：禁用 `node_repl` 只会少一个 JavaScript REPL MCP 工具，不影响 Codex 的主要功能，例如阅读仓库、修改文件、运行命令和协助开发。
-```
 
 ## Docker 镜像
 
