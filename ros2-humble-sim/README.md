@@ -123,6 +123,85 @@ source install/setup.bash
 按照教程https://docs.right.codes/docs/rc_cli_config/wsl.html即可
 推荐使用ccswitch导入配置文件
 
+### Codex 在 WSL 中的常见提示处理
+
+#### 1. bubblewrap 未安装
+
+如果启动 Codex 时出现：
+
+```text
+Codex could not find bubblewrap on PATH.
+Install bubblewrap with your OS package manager.
+Codex will use the bundled bubblewrap in the meantime.
+```
+
+原因是 Ubuntu/WSL 中没有安装系统版 `bubblewrap`。`bubblewrap` 用于 Codex 的 Linux sandbox 隔离。
+
+解决：
+
+```bash
+sudo apt update
+sudo apt install -y bubblewrap
+```
+
+验证：
+
+```bash
+command -v bwrap
+bwrap --version
+```
+
+安装完成后重启 VS Code WSL 窗口或 Codex。
+
+#### 2. node_repl MCP 启动失败
+
+如果启动 Codex 时出现：
+
+```text
+MCP client for `node_repl` failed to start:
+MCP startup failed: No such file or directory (os error 2)
+
+MCP startup incomplete (failed: node_repl)
+```
+
+通常是因为 `~/.codex/config.toml` 中的 `node_repl` 配置指向了 Windows 路径，例如：
+
+```toml
+[mcp_servers.node_repl]
+command = 'C:\Users\...\node_repl.exe'
+```
+
+但当前 Codex 运行在 WSL Ubuntu 中，无法直接识别这个 Windows 路径，因此启动失败。
+
+如果暂时不需要 `node_repl`，最简单稳定的处理方式是直接禁用它。
+
+先备份配置：
+
+```bash
+cp ~/.codex/config.toml ~/.codex/config.toml.bak
+```
+
+打开配置：
+
+```bash
+code ~/.codex/config.toml
+```
+
+删除或注释掉以下相关段落：
+
+```toml
+[mcp_servers.node_repl]
+...
+
+[mcp_servers.node_repl.env]
+...
+```
+
+保存后重启 VS Code WSL 窗口或 Codex。
+
+说明：禁用 `node_repl` 只会少一个 JavaScript REPL MCP 工具，不影响 Codex 的主要功能，例如阅读仓库、修改文件、运行命令和协助开发。
+```
+
 ## Docker 镜像
 
 Docker 不是当前本地开发的主要方式，只保留给后续团队服务器或统一镜像使用。
