@@ -13,8 +13,6 @@ Windows 10/11
       -> turtlesim / RViz2 / Gazebo / ros2_control
 ```
 
-> 注意：ROS 2 Foxy 已经过官方维护期，不建议作为新项目主环境。该目录主要用于旧项目复现、兼容测试或课程环境要求。新项目优先使用 `ros2-humble-sim/`。
-
 ## 快速开始
 
 在 Windows PowerShell 或 Windows Terminal 中安装并进入 Ubuntu 20.04：
