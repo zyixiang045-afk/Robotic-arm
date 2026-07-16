@@ -31,7 +31,7 @@ wsl --status
 wsl -l -v
 ```
 
-会显示系统中已有的ubuntu版本
+会显示系统中已有的ubuntu版本。
 
 ## 2. 安装 Ubuntu 20.04
 
@@ -136,21 +136,29 @@ foxy
 
 方式一：在 Ubuntu 终端中：
 
+1.打开用户目录（之后linux系统中下载的内容存放在此目录）
+```bash
+cd ~
+code .
+```
+
+2.打开ros2目录
 ```bash
 cd ~/Robotic-arm/ros2-foxy-sim
 code .
 ```
 
-此时vscode会提示下载wsl扩展，按照提示下载此系列扩展。
+此过程中vscode会提示下载wsl扩展，按照提示下载此系列扩展。
 
-下载完成后点击左侧电脑形状的任务栏，会显示你下载好的ubuntu版本，需要远程连接时点击即可。在扩展市场中，原先下载好的扩展上会显示“在wsl中安装”，按需求点击必要的扩展进行安装。
+下载完成后点击左侧电脑形状的任务栏，会显示下载完成的ubuntu版本，点击”→“即可进入所选定的目录。在扩展市场中，原先下载好的扩展上会显示“在wsl中安装”，按需求点击必要的扩展进行安装。
 
 方式二：在 VS Code 中：（前提是已下载wsl扩展）
 
 1. 点击左下角远程连接按钮。
 2. 选择 `Connect to WSL using Distro...`。
 3. 选择 `Ubuntu-20.04`。
-4. 打开 `/home/<你的Linux用户名>/Robotic-arm/ros2-foxy-sim`。
+4. 打开 `/home/<你的Linux用户名>`。
+5. 重复以上步骤，打开 `/home/<你的Linux用户名>/Robotic-arm/ros2-foxy-sim`。
 
 此后在Windows系统中打开vscode默认远程连接ubuntu系统。在vscode左下角显示。
 
