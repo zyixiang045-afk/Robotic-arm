@@ -71,7 +71,7 @@ wsl -l -v
 进入 Ubuntu 20.04 后执行：
 
 ```bash
-cd /mnt/c/Users/<你的用户代号>/Documents/ros2/ros2-foxy-sim
+cd /mnt/c/Users/18707/Documents/ros2/ros2-foxy-sim
 bash scripts/setup_wsl_ros2_foxy.sh
 ```
 
