@@ -215,7 +215,7 @@ code .
 1. 点击左下角远程连接按钮。
 2. 选择 `Connect to WSL using Distro...`。
 3. 选择 `Ubuntu-20.04`。
-4. 打开 `/home/<你的用户名>/ros2_ws` 或本仓库目录。
+4. 打开 `/home/<你的用户名>/` 或本仓库目录。
 
 ## 8. Codex 与 Node.js
 
