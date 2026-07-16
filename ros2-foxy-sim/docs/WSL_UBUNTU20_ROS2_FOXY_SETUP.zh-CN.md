@@ -236,38 +236,10 @@ code .
 
 ## 9. Codex 与 Node.js
 
-如果需要在 Ubuntu 20.04 中运行 Codex，建议先安装 `bubblewrap`：
+请按照https://docs.right.codes/docs/rc_cli_config/wsl.html中的步骤安装Node.js 和 npm，并选择通过Windows下的cc-switch导入。
+在终端中输入codex，如果出现对话框则安装成功。
 
-```bash
-sudo apt update
-sudo apt install -y bubblewrap
-```
-
-验证：
-
-```bash
-command -v bwrap
-bwrap --version
-```
-
-Node.js 推荐使用 nvm。若安装 nvm 卡在 `Cloning into ~/.nvm`，可使用 script 模式：
-
-```bash
-rm -rf ~/.nvm
-curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh -o /tmp/install_nvm.sh
-METHOD=script PROFILE="$HOME/.bashrc" bash /tmp/install_nvm.sh
-source ~/.bashrc
-```
-
-安装 Node.js 22：
-
-```bash
-export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node
-nvm install 22
-nvm alias default 22
-nvm use 22
-```
-
+以下是解决warning指南
 如果 Codex 报：
 
 ```text
