@@ -1,6 +1,6 @@
 # WSL2 + Ubuntu 20.04 + ROS 2 Foxy 部署与问题记录
 
-本文档记录本项目的 ROS 2 Foxy 复现环境。Foxy 已经过维护期，因此该环境主要用于旧项目、课程要求或兼容性测试。新项目建议使用 Ubuntu 22.04 + ROS 2 Humble。
+本文档记录本项目的 ROS 2 Foxy 复现环境。
 
 目标环境：
 
