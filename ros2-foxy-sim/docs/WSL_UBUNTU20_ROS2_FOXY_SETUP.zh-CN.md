@@ -1,6 +1,6 @@
 # WSL2 + Ubuntu 20.04 + ROS 2 Foxy 部署与问题记录
 
-本文档记录本项目的 ROS 2 Foxy 复现环境。安装过程中最好科学上网。
+本文档记录 ROS 2 Foxy 复现环境。安装过程中最好科学上网。
 
 目标环境：
 
@@ -15,7 +15,7 @@ Windows 10/11
 
 ## 1. 安装 WSL2
 
-在 Windows PowerShell 或 Windows Terminal 中执行：
+在 Windows PowerShell 中执行：
 
 ```powershell
 wsl --install
@@ -28,6 +28,8 @@ wsl --set-default-version 2
 wsl --status
 wsl -l -v
 ```
+
+出现版本编号则表明安装完成。创建账号输入密码时文字不可见，属正常现象。
 
 如果提示需要启用虚拟化，需要检查 BIOS/UEFI 中 CPU virtualization 是否开启，并确认 Windows 功能中启用了：
 
@@ -62,7 +64,7 @@ wsl --set-default Ubuntu-20.04
 wsl -l -v
 ```
 
-默认发行版前会显示 `*`。
+默认发行版前会显示 `*`。此后在 powershell 中输入wsl就可以直接进入对应版本的ubuntu终端。
 
 ## 3. 安装 ROS 2 Foxy
 
@@ -123,37 +125,7 @@ bash scripts/test_ros2_basics.sh
 Basic ROS 2 Foxy tests passed.
 ```
 
-## 5. Topic 测试
-
-保持 talker 运行，在另一个终端执行：
-
-```bash
-source /opt/ros/foxy/setup.bash
-ros2 node list
-ros2 topic list
-ros2 topic echo /chatter
-ros2 topic info /chatter
-```
-
-注意：Foxy 中 `ros2 topic echo` 不支持 `--once` 参数。收到一条消息后手动按 `Ctrl+C` 停止。
-
-如果提示：
-
-```text
-Unknown topic '/chatter'
-```
-
-通常是 talker 没有运行，或不同终端的 `ROS_DOMAIN_ID` 不一致。
-
-检查：
-
-```bash
-echo $ROS_DOMAIN_ID
-```
-
-两个终端应保持一致，默认可以为空。
-
-## 6. RViz2 与 Gazebo 测试
+## 5. RViz2 与 Gazebo 测试
 
 测试 RViz2：
 
@@ -197,7 +169,7 @@ xeyes
 glxgears
 ```
 
-## 7. turtlesim 图形验证
+## 6. turtlesim 图形验证
 
 启动 turtlesim：
 
@@ -215,7 +187,7 @@ ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0}, angu
 
 如果小乌龟开始画圆，说明 WSL 图形窗口、ROS 2 topic 和仿真节点都正常。
 
-## 8. VS Code 打开 Ubuntu 20.04
+## 7. VS Code 打开 Ubuntu 20.04
 
 推荐使用 VS Code Remote - WSL。
 
@@ -234,7 +206,7 @@ code .
 3. 选择 `Ubuntu-20.04`。
 4. 打开 `/home/<你的用户名>/` 或本仓库目录。
 
-## 9. Codex 与 Node.js
+## 8. Codex 与 Node.js
 
 请按照https://docs.right.codes/docs/rc_cli_config/wsl.html 中的步骤安装Node.js 和 npm，并选择通过Windows下的cc-switch导入。
 在终端中输入codex，如果出现对话框则安装成功。
