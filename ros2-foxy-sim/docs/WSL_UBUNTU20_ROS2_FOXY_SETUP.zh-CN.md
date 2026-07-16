@@ -197,61 +197,8 @@ xeyes
 glxgears
 ```
 
-## 7. WSL 代理问题
 
-WSL 启动时可能出现：
-
-```text
-wsl: 检测到 localhost 代理配置，但未镜像到 WSL。NAT 模式下的 WSL 不支持 localhost 代理。
-```
-
-这不是致命错误。如果 `apt update` 和 `rosdep update` 能正常完成，可以忽略。
-
-如果访问 GitHub 或 raw.githubusercontent.com 超时，假设 Windows 代理端口是 `7890`，可在 Ubuntu 中执行：
-
-```bash
-export WINDOWS_HOST=$(ip route | awk '/default/ {print $3}')
-export http_proxy=http://$WINDOWS_HOST:7890
-export https_proxy=http://$WINDOWS_HOST:7890
-```
-
-测试：
-
-```bash
-curl -I https://github.com
-curl -I https://raw.githubusercontent.com
-```
-
-## 8. rosdep 常见问题
-
-如果出现：
-
-```text
-ERROR: no sources directory exists on the system meaning rosdep has not yet been initialized.
-```
-
-执行：
-
-```bash
-sudo rosdep init
-rosdep update --include-eol-distros
-```
-
-如果 `rosdep update` 超时，通常是 raw.githubusercontent.com 访问问题，按第 7 节配置代理。
-
-如果误用了：
-
-```bash
-rosdep version
-```
-
-会报 unsupported command。正确命令是：
-
-```bash
-rosdep --version
-```
-
-## 9. VS Code 打开 Ubuntu 20.04
+## 7. VS Code 打开 Ubuntu 20.04
 
 推荐使用 VS Code Remote - WSL。
 
@@ -270,7 +217,7 @@ code .
 3. 选择 `Ubuntu-20.04`。
 4. 打开 `/home/<你的用户名>/ros2_ws` 或本仓库目录。
 
-## 10. Codex 与 Node.js
+## 8. Codex 与 Node.js
 
 如果需要在 Ubuntu 20.04 中运行 Codex，建议先安装 `bubblewrap`：
 
@@ -332,3 +279,59 @@ awk '
 ```
 
 重启 Codex 后，如果不再出现 `node_repl` 警告，说明修复成功。
+
+# 问题记录
+
+## 1. WSL 代理问题
+
+WSL 启动时可能出现：
+
+```text
+wsl: 检测到 localhost 代理配置，但未镜像到 WSL。NAT 模式下的 WSL 不支持 localhost 代理。
+```
+
+这不是致命错误。如果 `apt update` 和 `rosdep update` 能正常完成，可以忽略。
+
+如果访问 GitHub 或 raw.githubusercontent.com 超时，假设 Windows 代理端口是 `7890`，可在 Ubuntu 中执行：
+
+```bash
+export WINDOWS_HOST=$(ip route | awk '/default/ {print $3}')
+export http_proxy=http://$WINDOWS_HOST:7890
+export https_proxy=http://$WINDOWS_HOST:7890
+```
+
+测试：
+
+```bash
+curl -I https://github.com
+curl -I https://raw.githubusercontent.com
+```
+
+## 2. rosdep 常见问题
+
+如果出现：
+
+```text
+ERROR: no sources directory exists on the system meaning rosdep has not yet been initialized.
+```
+
+执行：
+
+```bash
+sudo rosdep init
+rosdep update --include-eol-distros
+```
+
+如果 `rosdep update` 超时，通常是 raw.githubusercontent.com 访问问题，按第 7 节配置代理。
+
+如果误用了：
+
+```bash
+rosdep version
+```
+
+会报 unsupported command。正确命令是：
+
+```bash
+rosdep --version
+```
