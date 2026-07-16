@@ -239,36 +239,7 @@ code .
 请按照https://docs.right.codes/docs/rc_cli_config/wsl.html 中的步骤安装Node.js 和 npm，并选择通过Windows下的cc-switch导入。
 在终端中输入codex，如果出现对话框则安装成功。
 
-以下是解决warning指南
-
-如果 Codex 报：
-
-```text
-MCP client for `node_repl` failed to start: No such file or directory
-```
-
-检查 `~/.codex/config.toml` 是否包含 Windows 路径，例如：
-
-```toml
-command = 'C:\Users\18707\AppData\Local\OpenAI\Codex\bin\...\node_repl.exe'
-```
-
-Linux 不能执行 Windows `.exe` 路径。处理方式是备份配置并移除错误的 `node_repl` 配置块：
-
-```bash
-cp ~/.codex/config.toml ~/.codex/config.toml.bak.$(date +%Y%m%d-%H%M%S)
-```
-
-```bash
-awk '
-  /^\[mcp_servers\.node_repl\]$/ {skip=1; next}
-  /^\[mcp_servers\.node_repl\.env\]$/ {skip=1; next}
-  /^\[/ && skip {skip=0}
-  !skip {print}
-' ~/.codex/config.toml > ~/.codex/config.toml.tmp && mv ~/.codex/config.toml.tmp ~/.codex/config.toml
-```
-
-重启 Codex 后，如果不再出现 `node_repl` 警告，说明修复成功。
+此时可能会出现很多warning，但实际上不影响使用。
 
 # 问题记录
 
