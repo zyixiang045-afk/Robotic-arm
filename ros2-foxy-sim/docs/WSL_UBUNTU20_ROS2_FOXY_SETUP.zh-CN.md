@@ -197,8 +197,25 @@ xeyes
 glxgears
 ```
 
+## 7. turtlesim 图形验证
 
-## 7. VS Code 打开 Ubuntu 20.04
+启动 turtlesim：
+
+```bash
+source /opt/ros/foxy/setup.bash
+ros2 run turtlesim turtlesim_node
+```
+
+另开终端发布速度指令：
+
+```bash
+source /opt/ros/foxy/setup.bash
+ros2 topic pub /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0}, angular: {z: 1.0}}"
+```
+
+如果小乌龟开始画圆，说明 WSL 图形窗口、ROS 2 topic 和仿真节点都正常。
+
+## 8. VS Code 打开 Ubuntu 20.04
 
 推荐使用 VS Code Remote - WSL。
 
@@ -217,7 +234,7 @@ code .
 3. 选择 `Ubuntu-20.04`。
 4. 打开 `/home/<你的用户名>/` 或本仓库目录。
 
-## 8. Codex 与 Node.js
+## 9. Codex 与 Node.js
 
 如果需要在 Ubuntu 20.04 中运行 Codex，建议先安装 `bubblewrap`：
 
