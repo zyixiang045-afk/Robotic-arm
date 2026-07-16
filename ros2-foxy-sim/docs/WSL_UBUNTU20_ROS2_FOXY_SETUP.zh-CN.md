@@ -29,8 +29,6 @@ wsl --status
 wsl -l -v
 ```
 
-创建账户输入密码时文字不可见，属于正常现象。
-
 ## 2. 安装 Ubuntu 20.04
 
 尝试：
@@ -146,13 +144,19 @@ code .
 3. 选择 `Ubuntu-20.04`。
 4. 打开 `/home/<你的Linux用户名>/Robotic-arm/ros2-foxy-sim`。
 
-## 6. codex与Claude配置
+此后在Windows系统中打开vscode就能直接远程操控ubuntu系统。
+
+## 6. Linux系统中Codex与Claude配置
 
 按照https://docs.right.codes/docs/rc_cli_config/wsl.html 的流程先安装 Node.js 和 npm，然后依照 通过Windows下的cc-switch导入 进行配置。
 
 在ubuntu系统中输入codex出现对话框则证明配置成功，会出现很多warning但是不会影响使用。
 
-## 7. 基础通信测试
+# 验证测试
+
+实际上如果你部署好了Linux端的codex，可以直接输入“帮我验证此系统中的ros2功能完整性”然后等待即可。
+
+## 1. 基础通信测试
 
 终端 1：
 
@@ -183,7 +187,7 @@ bash scripts/test_ros2_basics.sh
 Basic ROS 2 Foxy tests passed.
 ```
 
-## 8. RViz2 与 Gazebo 测试
+## 2. RViz2 与 Gazebo 测试
 
 测试 RViz2：
 
@@ -227,7 +231,7 @@ xeyes
 glxgears
 ```
 
-## 9. turtlesim 图形验证
+## 3. turtlesim 图形验证
 
 启动 turtlesim：
 
