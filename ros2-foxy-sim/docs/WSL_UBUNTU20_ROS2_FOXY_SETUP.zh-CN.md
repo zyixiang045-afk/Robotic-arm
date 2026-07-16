@@ -236,10 +236,11 @@ code .
 
 ## 9. Codex 与 Node.js
 
-请按照https://docs.right.codes/docs/rc_cli_config/wsl.html中的步骤安装Node.js 和 npm，并选择通过Windows下的cc-switch导入。
+请按照https://docs.right.codes/docs/rc_cli_config/wsl.html 中的步骤安装Node.js 和 npm，并选择通过Windows下的cc-switch导入。
 在终端中输入codex，如果出现对话框则安装成功。
 
 以下是解决warning指南
+
 如果 Codex 报：
 
 ```text
