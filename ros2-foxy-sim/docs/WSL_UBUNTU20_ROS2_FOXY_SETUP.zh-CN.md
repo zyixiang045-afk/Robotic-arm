@@ -31,6 +31,8 @@ wsl --status
 wsl -l -v
 ```
 
+会显示系统中已有的ubuntu版本
+
 ## 2. 安装 Ubuntu 20.04
 
 尝试：
