@@ -139,6 +139,10 @@ cd ~/Robotic-arm/ros2-foxy-sim
 code .
 ```
 
+此时vscode会提示下载wsl扩展，按照提示下载。
+
+下载完成后点击左侧电脑形状的任务栏，会显示你下载好的ubuntu版本，需要远程连接时点击即可。在扩展市场中，原先下载好的扩展上会显示在wsl中安装，按需求点击必要的扩展进行安装。
+
 方式二：在 VS Code 中：
 
 1. 点击左下角远程连接按钮。
@@ -146,7 +150,7 @@ code .
 3. 选择 `Ubuntu-20.04`。
 4. 打开 `/home/<你的Linux用户名>/Robotic-arm/ros2-foxy-sim`。
 
-此后在Windows系统中打开vscode就能直接远程操控ubuntu系统。
+此后在Windows系统中打开vscode默认远程连接ubuntu系统。
 
 ## 6. Linux系统中Codex与Claude配置
 
