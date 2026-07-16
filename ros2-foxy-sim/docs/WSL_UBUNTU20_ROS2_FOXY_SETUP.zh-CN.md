@@ -1,4 +1,4 @@
-# WSL2 + Ubuntu 20.04 + ROS 2 Foxy 部署与验证指南
+# WSL2 + Ubuntu 20.04 + ROS 2 Foxy 部署指南
 
 **需要保持科学上网！**
 
