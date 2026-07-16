@@ -132,12 +132,6 @@ WSL 中访问 Windows 文件：
 cd /mnt/c/Users/<你的Windows用户名>
 ```
 
-示例：
-
-```bash
-cd /mnt/c/Users/18707/Documents/ros2
-```
-
 Windows 资源管理器访问 WSL：
 
 ```text
@@ -148,6 +142,12 @@ Windows 资源管理器访问 WSL：
 
 - 文档、README、轻量脚本可以放在 `/mnt/c/...`。
 - ROS 2、CMake、colcon 等大量编译项目建议放在 Linux home 下，例如 `~/ros2_ws`。
+- 本项目推荐 clone 到 Linux home，避免绑定某个队员的 Windows 用户路径：
+
+```bash
+git clone https://github.com/zyixiang045-afk/Robotic-arm.git ~/Robotic-arm
+cd ~/Robotic-arm/ros2-foxy-sim
+```
 
 ## 7. VS Code Remote WSL
 

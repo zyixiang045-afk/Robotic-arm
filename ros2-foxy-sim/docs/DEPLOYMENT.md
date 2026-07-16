@@ -14,7 +14,8 @@
 Ubuntu 20.04：
 
 ```bash
-cd /mnt/c/Users/18707/Documents/ros2/ros2-foxy-sim
+git clone https://github.com/zyixiang045-afk/Robotic-arm.git ~/Robotic-arm
+cd ~/Robotic-arm/ros2-foxy-sim
 bash scripts/setup_wsl_ros2_foxy.sh
 ```
 

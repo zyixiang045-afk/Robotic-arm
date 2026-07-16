@@ -5,7 +5,7 @@
 ## 1. 基础环境测试
 
 ```bash
-cd /mnt/c/Users/18707/Documents/ros2/ros2-foxy-sim
+cd ~/Robotic-arm/ros2-foxy-sim
 bash scripts/test_ros2_basics.sh
 ```
 

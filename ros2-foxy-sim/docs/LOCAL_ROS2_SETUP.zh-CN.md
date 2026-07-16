@@ -28,7 +28,14 @@ wsl --set-default Ubuntu-20.04
 Ubuntu 20.04 终端：
 
 ```bash
-cd /mnt/c/Users/18707/Documents/ros2/ros2-foxy-sim
+git clone https://github.com/zyixiang045-afk/Robotic-arm.git ~/Robotic-arm
+cd ~/Robotic-arm/ros2-foxy-sim
+```
+
+如果已经 clone 过仓库，只需要执行：
+
+```bash
+cd ~/Robotic-arm/ros2-foxy-sim
 ```
 
 ## 3. 安装 ROS 2 Foxy

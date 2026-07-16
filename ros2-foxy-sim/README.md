@@ -15,7 +15,20 @@ Windows 10/11
 
 ## 快速开始
 
-在 Windows PowerShell 或 Windows Terminal 中安装并进入 Ubuntu 20.04：
+队员先在自己的 Ubuntu 20.04 中 clone 仓库，例如：
+
+```bash
+git clone https://github.com/zyixiang045-afk/Robotic-arm.git ~/Robotic-arm
+cd ~/Robotic-arm/ros2-foxy-sim
+```
+
+如果仓库已经存在，直接进入：
+
+```bash
+cd ~/Robotic-arm/ros2-foxy-sim
+```
+
+然后在 Windows PowerShell 或 Windows Terminal 中安装并进入 Ubuntu 20.04：
 
 ```powershell
 wsl --install -d Ubuntu-20.04
@@ -27,7 +40,7 @@ wsl -d Ubuntu-20.04
 在 Ubuntu 20.04 中执行：
 
 ```bash
-cd /mnt/c/Users/18707/Documents/ros2/ros2-foxy-sim
+cd ~/Robotic-arm/ros2-foxy-sim
 bash scripts/setup_wsl_ros2_foxy.sh
 ```
 
@@ -61,6 +74,12 @@ bash scripts/test_ros2_basics.sh
 2. 选择 `Connect to WSL using Distro...`。
 3. 选择 `Ubuntu-20.04`。
 4. 打开 `/home/<你的用户名>/ros2_ws`，或打开本仓库目录。
+
+如果本地是从 GitHub clone 的仓库，推荐直接打开：
+
+```text
+~/Robotic-arm/ros2-foxy-sim
+```
 
 ## turtlesim 图形验证
 
