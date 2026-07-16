@@ -1,6 +1,6 @@
 # 文档索引
 
-本目录记录 Ubuntu 20.04 + ROS 2 Foxy 本地环境的部署、测试与故障处理流程。
+本目录记录 Ubuntu 20.04 + ROS 2 Foxy 本地环境的部署、测试和故障处理流程。
 
 ## 推荐阅读顺序
 
@@ -8,11 +8,14 @@
    - 完整记录 WSL2、Ubuntu 20.04、ROS 2 Foxy、VS Code、Codex 的部署流程。
    - 包含实际问题：WSL 代理、rosdep EOL 更新、Foxy topic 命令差异、Codex `bubblewrap` 与 `node_repl` 报错。
 
-2. `LOCAL_ROS2_SETUP.zh-CN.md`
+2. `WSL_INSTALL_CONFIG_GUIDE.zh-CN.md`
+   - Windows 终端安装和配置 WSL2 + Ubuntu 20.04 的精简指南。
+
+3. `LOCAL_ROS2_SETUP.zh-CN.md`
    - 本地 ROS 2 Foxy 环境安装与基础验证说明。
 
-3. `ROS2_FUNCTION_TEST_PLAN.zh-CN.md`
+4. `ROS2_FUNCTION_TEST_PLAN.zh-CN.md`
    - ROS 2 基础通信、topic、RViz2、Gazebo 的功能测试计划。
 
-4. `DEPLOYMENT.md`
-   - 本地部署说明与后续 Docker 镜像化路径。
+5. `DEPLOYMENT.md`
+   - 本地部署说明与后续 Docker 镜像路径。
