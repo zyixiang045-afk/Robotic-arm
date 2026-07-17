@@ -1,6 +1,6 @@
 # MuJoCo 3.10.0 部署说明
 
-本文档记录本项目当前使用的 MuJoCo 下载、解压、环境变量配置、C++ 编译和 Python 导入方案。
+**在linux系统终端中操作。**
 
 ## 1. 下载 MuJoCo native release
 
