@@ -1,9 +1,5 @@
 # Ubuntu 20.04 安装 ROS1 Noetic 指南
 
-本文档用于在 Ubuntu 20.04 LTS（focal）中安装 ROS1 Noetic。流程严格按清华 ROS 软件仓库页面的 ROS1 源配置方式执行：使用 HTTPS、发行版选择 `Ubuntu 20.04 LTS (focal)`，并先进入 root shell，因此后续命令不再额外添加 `sudo`。
-
-> 注意：ROS1 已停止更新。Ubuntu 20.04 对应的 ROS1 版本是 ROS Noetic。新项目建议优先使用 ROS2；本流程主要用于旧项目、课程环境或兼容性需求。
-
 ## 1. 进入 Ubuntu 20.04
 
 在 Windows PowerShell 中启动 Ubuntu 20.04：
@@ -27,7 +23,7 @@ focal
 
 ## 2. 进入 root shell
 
-按页面中“不使用 sudo”的方式操作，先进入 root：
+先进入 root：
 
 ```bash
 sudo -i
@@ -234,76 +230,5 @@ ROS2 Foxy：
 ```bash
 source /opt/ros/foxy/setup.bash
 ```
-
-## 12. 常见问题
-
-### 12.1 `apt update` 无法连接清华源
-
-测试网络：
-
-```bash
-curl -I https://mirrors.tuna.tsinghua.edu.cn
-```
-
-如果访问失败，检查网络或代理。
-
-### 12.2 `apt-key adv` 超时
-
-可以重试：
-
-```bash
-apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-```
-
-如果仍然失败，通常是 keyserver 网络问题，需要先配置代理或更换网络。
-
-### 12.3 `rosdep update` 超时
-
-通常是访问 GitHub raw 文件超时。先测试：
-
-```bash
-curl -I https://raw.githubusercontent.com
-```
-
-如果超时，需要配置代理后再执行：
-
-```bash
-rosdep update
-```
-
-### 12.4 `roscore: command not found`
-
-说明当前终端没有加载 ROS1 环境：
-
-```bash
-source /opt/ros/noetic/setup.bash
-```
-
-再验证：
-
-```bash
-echo $ROS_DISTRO
-```
-
-应输出：
-
-```text
-noetic
-```
-
-## 13. 最小命令汇总
-
-```bash
-sudo -i
-echo "deb https://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ focal main" > /etc/apt/sources.list.d/ros-latest.list
-apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-apt update
-apt install -y ros-noetic-desktop-full python3-rosdep
-rosdep init
-rosdep update
-exit
-echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-echo $ROS_DISTRO
 roscore
 ```
