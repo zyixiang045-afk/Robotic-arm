@@ -149,15 +149,3 @@ PY
 ```
 
 如果后续切换到更新的 Python 环境，可重新检查 PyPI 是否已有对应版本，再安装匹配的 Python 包。
-
-## 6. 当前机器状态
-
-当前机器已完成：
-
-- `~/mujoco-3.10.0` 已解压
-- `~/.bashrc` 已配置 MuJoCo 环境变量
-- `~/.local/lib/pkgconfig/mujoco.pc` 已创建
-- C++ 编译路径和运行时库路径已验证
-- Python `import mujoco` 已验证
-
-仓库中不保存 MuJoCo 压缩包或解压后的二进制目录，只保存本文档。
