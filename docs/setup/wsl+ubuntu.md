@@ -70,7 +70,7 @@ wsl -l -v
 ```bash
 sudo apt update
 sudo apt install -y git
-git clone https://github.com/zyixiang045-afk/Robotic-arm.git ~/Robotic-arm
+git clone https://github.com/zyixiang045-afk/Robotic-arm
 ```
 
 ## 4. VS Code 打开 Ubuntu 20.04 项目
