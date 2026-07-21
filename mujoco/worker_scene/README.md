@@ -20,6 +20,7 @@
 - `preview.png` —— 生成场景的离屏渲染预览
 
 ## 用法
+将文件夹导入目录~\mujoco-3.10.0/model/worker_scene
 ```bash
 python3 build_scene.py            # 生成 scene.xml 并校验编译
 python3 build_scene.py --view     # 生成后打开交互式查看器（需图形界面/WSLg）
