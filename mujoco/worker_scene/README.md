@@ -29,7 +29,8 @@ python3 build_scene.py --seed 0   # 固定随机种子（仅影响台面小道�
 
 也可用官方工具直接查看已生成的模型：
 ```bash
-python3 -m mujoco.viewer --mjcf=scene.xml
+  cd /home/nightflower/mujoco-3.10.0/model/worker_scene
+  ~/.local/python-3.11.9/bin/python3 -m mujoco.viewer --mjcf=scene_with_robot.xml
 ```
 
 ## 布局与调参说明（见 build_scene.py 顶部常量与 build_xml 中的列表）
