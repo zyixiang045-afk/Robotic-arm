@@ -1,1 +1,0 @@
-"""Small PyBullet simulation package."""

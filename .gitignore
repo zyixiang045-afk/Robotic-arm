@@ -1,0 +1,111 @@
+# ---------------------------------------------------------------------------
+# Project source policy
+# ---------------------------------------------------------------------------
+# This workspace contains large third-party runtimes, local model weights,
+# caches, and agent state. Keep the Git repo focused on project source,
+# documentation, MuJoCo scene definitions, and small configuration files.
+
+# Ignore most of the vendored MuJoCo distribution by default.
+mujoco-3.10.0/*
+
+# Keep the project-specific MuJoCo scene directories.
+!mujoco-3.10.0/model/
+mujoco-3.10.0/model/*
+!mujoco-3.10.0/model/worker_scene/
+!mujoco-3.10.0/model/worker_scene/**
+
+!mujoco-3.10.0/model.test/
+mujoco-3.10.0/model.test/*
+!mujoco-3.10.0/model.test/worker_scene/
+!mujoco-3.10.0/model.test/worker_scene/**
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+openpi/.venv/
+
+# ---------------------------------------------------------------------------
+# Local dependencies, caches, and third-party checkouts
+# ---------------------------------------------------------------------------
+openpi/
+models/
+.hf_cache/
+.uv-cache/
+.cache/
+*.cache
+
+# Local AI agent/tooling state. These directories may contain sessions,
+# auth material, local databases, shell snapshots, and machine-specific config.
+claude/
+codex/
+.agents/
+.codex/
+.claude/
+
+# Node/package-manager outputs, in case new tooling is added later.
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------------------------------------------------------------------------
+# Model weights and large binary checkpoints
+# ---------------------------------------------------------------------------
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+
+# ---------------------------------------------------------------------------
+# MuJoCo / SmolVLA runtime outputs
+# ---------------------------------------------------------------------------
+MUJOCO_LOG.TXT
+**/MUJOCO_LOG.TXT
+
+mujoco-3.10.0/model/worker_scene/smolvla_trace/
+mujoco-3.10.0/model/worker_scene/smolvla_preview.png
+
+# Generated videos or one-off render outputs.
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Generated 2D/3D SLAM maps and RTAB-Map databases.
+mujoco-3.10.0/model/worker_scene/maps/*.pgm
+mujoco-3.10.0/model/worker_scene/maps/*.yaml
+mujoco-3.10.0/model/worker_scene/maps/*.db
+mujoco-3.10.0/model.test/worker_scene/maps/*.pgm
+mujoco-3.10.0/model.test/worker_scene/maps/*.yaml
+mujoco-3.10.0/model.test/worker_scene/maps/*.db
+
+# Generated 3D SLAM XML variant; rebuild with gen_3d_xml.py when needed.
+mujoco-3.10.0/model.test/worker_scene/scene_with_robot_3d_py38.xml
+
+# ---------------------------------------------------------------------------
+# Editor, OS, and local scratch files
+# ---------------------------------------------------------------------------
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.hello.txt.swp
