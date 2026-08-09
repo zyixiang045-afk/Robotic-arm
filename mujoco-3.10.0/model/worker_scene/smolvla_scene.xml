@@ -22,6 +22,8 @@
     <material name="apple_mat" rgba="0.84 0.14 0.12 1" reflectance="0.08"/>
     <material name="stem_mat" rgba="0.32 0.20 0.10 1"/>
     <material name="metal_mat" rgba="0.55 0.57 0.60 1" reflectance="0.25"/>
+    <material name="camera_body_mat" rgba="0.16 0.18 0.20 1" reflectance="0.12"/>
+    <material name="camera_lens_mat" rgba="0.12 0.56 0.96 1" reflectance="0.25"/>
     <material name="wall_mat" rgba="0.86 0.87 0.88 1" reflectance="0.04"/>
     <mesh name="base_link" file="assets/arm/base_link.STL"/>
     <mesh name="link_1" file="assets/arm/link_1.STL"/>
@@ -36,9 +38,24 @@
     <light name="top1" pos="-0.5 0.7 3.0" dir="0 0 -1" diffuse="0.7 0.7 0.7"/>
     <light name="top2" pos="2.0 2.0 3.0" dir="0 0 -1" diffuse="0.55 0.55 0.55"/>
     <light name="table_fill" pos="1.5 1.8 2.1" dir="0.3 0.3 -1" diffuse="0.25 0.25 0.25"/>
-    <camera name="camera1" pos="1 1 1.75" quat="0.7780579432 0.5229055194 -0.1941872238 -0.2889411305" fovy="58.0"/>
-    <camera name="camera2" pos="3.05 1.55 1.65" quat="0.7712601855 0.4691791327 0.2235563616 0.3674931575" fovy="58.0"/>
-    <camera name="camera3" pos="2.25 2.35 2.25" quat="0.51187202 0.03061247441 0.05125192992 0.8569849189" fovy="58.0"/>
+    <body name="camera1_rig" pos="1 1 1.75" quat="0.7780579432 0.5229055194 -0.1941872238 -0.2889411305">
+      <camera name="camera1" pos="0 0 0" quat="1 0 0 0" fovy="58.0"/>
+      <geom name="camera1_stem" type="capsule" fromto="0 0 0 0 0 0.052" size="0.007" material="camera_body_mat" contype="0" conaffinity="0"/>
+      <geom name="camera1_body" type="box" pos="0 0 0.068" size="0.04 0.024 0.016" material="camera_body_mat" contype="0" conaffinity="0"/>
+      <geom name="camera1_lens" type="sphere" pos="0 0 0.095" size="0.011" material="camera_lens_mat" contype="0" conaffinity="0"/>
+    </body>
+    <body name="camera2_rig" pos="3.05 1.55 1.65" quat="0.7712601855 0.4691791327 0.2235563616 0.3674931575">
+      <camera name="camera2" pos="0 0 0" quat="1 0 0 0" fovy="58.0"/>
+      <geom name="camera2_stem" type="capsule" fromto="0 0 0 0 0 0.052" size="0.007" material="camera_body_mat" contype="0" conaffinity="0"/>
+      <geom name="camera2_body" type="box" pos="0 0 0.068" size="0.04 0.024 0.016" material="camera_body_mat" contype="0" conaffinity="0"/>
+      <geom name="camera2_lens" type="sphere" pos="0 0 0.095" size="0.011" material="camera_lens_mat" contype="0" conaffinity="0"/>
+    </body>
+    <body name="camera3_rig" pos="2.25 2.35 2.25" quat="0.51187202 0.03061247441 0.05125192992 0.8569849189">
+      <camera name="camera3" pos="0 0 0" quat="1 0 0 0" fovy="58.0"/>
+      <geom name="camera3_stem" type="capsule" fromto="0 0 0 0 0 0.052" size="0.007" material="camera_body_mat" contype="0" conaffinity="0"/>
+      <geom name="camera3_body" type="box" pos="0 0 0.068" size="0.04 0.024 0.016" material="camera_body_mat" contype="0" conaffinity="0"/>
+      <geom name="camera3_lens" type="sphere" pos="0 0 0.095" size="0.011" material="camera_lens_mat" contype="0" conaffinity="0"/>
+    </body>
     <geom name="wall_S" type="box" pos="1.5 0 1.4" size="1.5 0.1 1.4" material="wall_mat"/>
     <geom name="wall_N" type="box" pos="1.5 3 1.4" size="1.5 0.1 1.4" material="wall_mat"/>
     <geom name="wall_W" type="box" pos="0 1.5 1.4" size="0.1 1.5 1.4" material="wall_mat"/>
@@ -57,11 +74,11 @@
       <geom name="apple_stem" type="capsule" fromto="0 0 0.0234 0 0 0.0432" size="0.004" material="stem_mat" contype="0" conaffinity="0"/>
       <site name="apple_site" pos="0 0 0" size="0.01 0.01 0.01" rgba="0 1 1 0"/>
     </body>
-    <body name="arm_pedestal" pos="1.15 2.35 0">
+    <body name="arm_pedestal" pos="1.55 2.35 0">
       <geom name="arm_pedestal_base" type="box" pos="0 0 0.28" size="0.14 0.14 0.28" material="metal_mat"/>
       <geom name="arm_pedestal_cap" type="box" pos="0 0 0.575" size="0.16 0.16 0.015" material="metal_mat"/>
     </body>
-    <body name="arm" pos="1.15 2.35 0.59" quat="6.123233996e-17 0 0 1" gravcomp="1">
+    <body name="arm" pos="1.55 2.35 0.59" quat="6.123233996e-17 0 0 1" gravcomp="1">
       <geom type="mesh" contype="2" conaffinity="1" group="1" density="0" rgba="1 1 1 1" mesh="base_link" friction="1 0.005 0.0001" solref="0.02 1"/>
       <geom type="mesh" rgba="1 1 1 1" mesh="base_link" contype="2" conaffinity="1" friction="1 0.005 0.0001" solref="0.02 1"/>
       <body name="link_1" pos="0 0 0.2405" gravcomp="1">

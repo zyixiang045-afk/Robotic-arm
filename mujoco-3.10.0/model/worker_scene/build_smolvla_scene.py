@@ -36,7 +36,7 @@ TABLE_HALF = (0.45, 0.35, 0.02)
 TABLE_LEG_HALF = 0.03
 BOARD_HALF = (0.15, 0.15, 0.004)
 
-ARM_MOUNT_XYZ = (1.15, 2.35, 0.59)
+ARM_MOUNT_XYZ = (1.55, 2.35, 0.59)
 ARM_PEDESTAL_TOP = 0.56
 
 APPLE_RADIUS = 0.036
@@ -50,6 +50,10 @@ CAMERAS = (
 )
 CAM_RES = (256, 256)
 CAM_FOVY = 58.0
+CAM_MARKER_BODY = (0.040, 0.024, 0.016)
+CAM_MARKER_STEM = 0.007
+CAM_MARKER_STEM_LEN = 0.052
+CAM_MARKER_LENS = 0.011
 
 JOINT_NAMES = tuple(f"joint_{i}" for i in range(1, 7))
 READY_POSE = {
@@ -99,6 +103,58 @@ def _lookat_quat(pos, target, up=(0.0, 0.0, 1.0)) -> tuple[float, float, float, 
 def _append(parent: ET.Element, tag: str, **attrs) -> ET.Element:
     clean = {key: str(value) for key, value in attrs.items() if value is not None}
     return ET.SubElement(parent, tag, clean)
+
+
+def _add_camera_rig(world: ET.Element, name: str, pos, target) -> None:
+    """Create a visible fixed camera rig without changing the camera name."""
+    rig = _append(
+        world,
+        "body",
+        name=f"{name}_rig",
+        pos=_fmt(pos),
+        quat=_fmt(_lookat_quat(pos, target)),
+    )
+    _append(
+        rig,
+        "camera",
+        name=name,
+        pos="0 0 0",
+        quat="1 0 0 0",
+        fovy=CAM_FOVY,
+    )
+    _append(
+        rig,
+        "geom",
+        name=f"{name}_stem",
+        type="capsule",
+        fromto=_fmt((0.0, 0.0, 0.0, 0.0, 0.0, CAM_MARKER_STEM_LEN)),
+        size=f"{CAM_MARKER_STEM}",
+        material="camera_body_mat",
+        contype="0",
+        conaffinity="0",
+    )
+    _append(
+        rig,
+        "geom",
+        name=f"{name}_body",
+        type="box",
+        pos=_fmt((0.0, 0.0, CAM_MARKER_STEM_LEN + CAM_MARKER_BODY[2])),
+        size=_fmt(CAM_MARKER_BODY),
+        material="camera_body_mat",
+        contype="0",
+        conaffinity="0",
+    )
+    _append(
+        rig,
+        "geom",
+        name=f"{name}_lens",
+        type="sphere",
+        pos=_fmt((0.0, 0.0, CAM_MARKER_STEM_LEN + 2.0 * CAM_MARKER_BODY[2] + CAM_MARKER_LENS)),
+        size=f"{CAM_MARKER_LENS}",
+        material="camera_lens_mat",
+        contype="0",
+        conaffinity="0",
+    )
 
 
 def _load_arm_xml() -> ET.Element:
@@ -211,6 +267,8 @@ def _add_assets(root: ET.Element, arm_assets: list[ET.Element]) -> None:
     _append(asset, "material", name="apple_mat", rgba="0.84 0.14 0.12 1", reflectance="0.08")
     _append(asset, "material", name="stem_mat", rgba="0.32 0.20 0.10 1")
     _append(asset, "material", name="metal_mat", rgba="0.55 0.57 0.60 1", reflectance="0.25")
+    _append(asset, "material", name="camera_body_mat", rgba="0.16 0.18 0.20 1", reflectance="0.12")
+    _append(asset, "material", name="camera_lens_mat", rgba="0.12 0.56 0.96 1", reflectance="0.25")
     _append(asset, "material", name="wall_mat", rgba="0.86 0.87 0.88 1", reflectance="0.04")
 
     for mesh in arm_assets:
@@ -225,14 +283,7 @@ def _add_world(root: ET.Element, arm_body: ET.Element) -> None:
     _append(world, "light", name="table_fill", pos="1.5 1.8 2.1", dir="0.3 0.3 -1", diffuse="0.25 0.25 0.25")
 
     for name, pos, target in CAMERAS:
-        _append(
-            world,
-            "camera",
-            name=name,
-            pos=_fmt(pos),
-            quat=_fmt(_lookat_quat(pos, target)),
-            fovy=CAM_FOVY,
-        )
+        _add_camera_rig(world, name, pos, target)
 
     x0, x1 = ROOM_X
     y0, y1 = ROOM_Y
