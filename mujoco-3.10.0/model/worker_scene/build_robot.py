@@ -20,6 +20,7 @@
 import argparse
 import os
 import re
+from pathlib import Path
 
 import math
 
@@ -104,7 +105,7 @@ def load_arm_spec():
     src = os.path.join(URDF_DIR, "RM65-6F.urdf")
     txt = open(src, encoding="utf-8").read()
     txt = txt.replace("package://RM65-6F/meshes/", "")
-    meshdir = os.path.join(ASSET_DIR, "arm") + "/"
+    meshdir = Path(os.path.join(ASSET_DIR, "arm")).as_posix() + "/"
     inject = (f'<robot name="RM65-6F">\n'
               f'  <mujoco><compiler meshdir="{meshdir}" '
               f'balanceinertia="true" discardvisual="false"/></mujoco>')
@@ -117,8 +118,8 @@ def load_hand_spec(side):
     side='right' → 右手模型；side='left' → 左手模型。"""
     src = os.path.join(URDF_DIR, f"dexhand021_{side}_simplified.urdf")
     txt = open(src, encoding="utf-8").read()
-    meshdir = os.path.join(ASSET_DIR, "hand") + "/"
-    txt = re.sub(r'meshdir="[^"]*"', f'meshdir="{meshdir}"', txt)
+    meshdir = Path(os.path.join(ASSET_DIR, "hand")).as_posix() + "/"
+    txt = re.sub(r'meshdir="[^"]*"', lambda _: f'meshdir="{meshdir}"', txt)
     txt = txt.replace("../meshes/dexhand021_simplified/", "")
     return mujoco.MjSpec.from_string(txt)
 
@@ -322,17 +323,17 @@ def build(spec=None):
         jx.name = "base_x"
         jx.type = mujoco.mjtJoint.mjJNT_SLIDE
         jx.axis = [-1, 0, 0]             # 局部 -x → 世界 +x
-        jx.damping = [BASE_DAMPING, 0, 0]
+        jx.damping = BASE_DAMPING
         jy = dog.add_joint()
         jy.name = "base_y"
         jy.type = mujoco.mjtJoint.mjJNT_SLIDE
         jy.axis = [0, -1, 0]             # 局部 -y → 世界 +y
-        jy.damping = [BASE_DAMPING, 0, 0]
+        jy.damping = BASE_DAMPING
         jt = dog.add_joint()
         jt.name = "base_yaw"
         jt.type = mujoco.mjtJoint.mjJNT_HINGE
         jt.axis = [0, 0, 1]
-        jt.damping = [BASE_YAW_DAMPING, 0, 0]
+        jt.damping = BASE_YAW_DAMPING
 
     ox, oy, oz = _dog_mesh_offset()
     dsx, dsy, dsz = _dog_size()

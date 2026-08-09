@@ -51,32 +51,62 @@ import numpy as np
 import torch
 
 from lerobot.configs.policies import PreTrainedConfig
-from lerobot.datasets.utils import build_dataset_frame
-from lerobot.datasets.utils import combine_feature_dicts
-from lerobot.datasets.utils import hw_to_dataset_features
 from lerobot.policies.factory import make_pre_post_processors
 from lerobot.policies.smolvla.modeling_smolvla import SmolVLAPolicy
 from lerobot.policies.utils import make_robot_action
+
+try:
+    from lerobot.datasets.utils import combine_feature_dicts
+except (ImportError, AttributeError):
+    def combine_feature_dicts(*dicts: dict) -> dict:
+        merged: dict = {}
+        for item in dicts:
+            merged.update(item)
+        return merged
 
 HERE = Path(__file__).resolve().parent
 WORKSPACE = HERE.parents[2]
 DEFAULT_MODEL_DIR = WORKSPACE / "models" / "smolvla_base"
 DEFAULT_VLM_MODEL_DIR = WORKSPACE / "models" / "SmolVLM2-500M-Video-Instruct"
-DEFAULT_XML = HERE / "smolvla_scene.xml"
+DEFAULT_XML = HERE / "smolvla_tactile_scene.xml"
 
-JOINT_NAMES = tuple(f"joint_{i}" for i in range(1, 7))
-READY_POSE = {
-    "joint_1": 0.0,
-    "joint_2": 1.05,
-    "joint_3": 0.60,
-    "joint_4": 0.0,
-    "joint_5": 0.90,
-    "joint_6": 0.0,
-}
-CAMERAS = ("camera1", "camera2", "camera3")
+JOINT_NAMES = (
+    "arm/joint_1",
+    "arm/joint_2",
+    "arm/joint_3",
+    "arm/joint_4",
+    "arm/joint_5",
+    "arm/joint_6",
+    "hand/r_f_joint1_1",
+    "hand/r_f_joint1_2",
+    "hand/r_f_joint1_3",
+    "hand/r_f_joint1_4",
+    "hand/r_f_joint2_1",
+    "hand/r_f_joint2_2",
+    "hand/r_f_joint2_3",
+    "hand/r_f_joint2_4",
+    "hand/r_f_joint3_1",
+    "hand/r_f_joint3_2",
+    "hand/r_f_joint3_3",
+    "hand/r_f_joint3_4",
+    "hand/r_f_joint4_1",
+    "hand/r_f_joint4_2",
+    "hand/r_f_joint4_3",
+    "hand/r_f_joint4_4",
+)
+CAMERAS = ("image", "wrist_image")
 CAM_WIDTH = 256
 CAM_HEIGHT = 256
+TACTILE_SENSOR_NAMES = tuple(f"tactile_{i:02d}" for i in range(20))
 ACTION_KEY = "action"
+READY_POSE = {
+    "arm/joint_1": 0.0,
+    "arm/joint_2": 1.05,
+    "arm/joint_3": 0.60,
+    "arm/joint_4": 0.0,
+    "arm/joint_5": 0.90,
+    "arm/joint_6": 0.0,
+}
 
 
 def _joint_id(model: mujoco.MjModel, joint_name: str) -> int:
@@ -94,6 +124,16 @@ def _actuator_ids(model: mujoco.MjModel) -> dict[str, int]:
         if actuator_id < 0:
             raise RuntimeError(f"Missing actuator: {actuator_name}")
         ids[joint_name] = actuator_id
+    return ids
+
+
+def _tactile_sensor_ids(model: mujoco.MjModel) -> dict[str, int]:
+    ids = {}
+    for sensor_name in TACTILE_SENSOR_NAMES:
+        sensor_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_SENSOR, sensor_name)
+        if sensor_id < 0:
+            raise RuntimeError(f"Missing tactile sensor: {sensor_name}")
+        ids[sensor_name] = sensor_id
     return ids
 
 
@@ -119,8 +159,53 @@ def _reset_ready(model: mujoco.MjModel, data: mujoco.MjData, actuator_ids: dict[
     mujoco.mj_forward(model, data)
 
 
-def _collect_raw_obs(model: mujoco.MjModel, data: mujoco.MjData, renderer: mujoco.Renderer) -> dict:
-    obs = {joint_name: _get_joint_qpos(model, data, joint_name) for joint_name in JOINT_NAMES}
+def _build_features() -> dict[str, dict]:
+    return combine_feature_dicts(
+        {
+            "observation.image": {
+                "type": "VISUAL",
+                "shape": [3, CAM_HEIGHT, CAM_WIDTH],
+                "names": ["channels", "height", "width"],
+            },
+            "observation.wrist_image": {
+                "type": "VISUAL",
+                "shape": [3, CAM_HEIGHT, CAM_WIDTH],
+                "names": ["channels", "height", "width"],
+            },
+            "observation.state": {
+                "type": "STATE",
+                "shape": [len(JOINT_NAMES)],
+                "names": list(JOINT_NAMES),
+            },
+            "observation.tactile": {
+                "type": "STATE",
+                "shape": [len(TACTILE_SENSOR_NAMES)],
+                "names": list(TACTILE_SENSOR_NAMES),
+            },
+        },
+        {
+            "action": {
+                "type": "ACTION",
+                "shape": [len(JOINT_NAMES)],
+                "names": list(JOINT_NAMES),
+            }
+        },
+    )
+
+
+def _collect_raw_obs(
+    model: mujoco.MjModel,
+    data: mujoco.MjData,
+    renderer: mujoco.Renderer,
+    tactile_sensor_ids: dict[str, int],
+) -> dict:
+    obs = {
+        "state": np.asarray([_get_joint_qpos(model, data, joint_name) for joint_name in JOINT_NAMES], dtype=np.float32),
+        "tactile": np.asarray(
+            [float(data.sensordata[model.sensor_adr[sid]]) for sid in tactile_sensor_ids.values()],
+            dtype=np.float32,
+        ),
+    }
     for camera_name in CAMERAS:
         renderer.update_scene(data, camera=camera_name)
         image = renderer.render()
@@ -128,16 +213,14 @@ def _collect_raw_obs(model: mujoco.MjModel, data: mujoco.MjData, renderer: mujoc
     return obs
 
 
-def _build_features() -> dict[str, dict]:
-    obs_hw = {name: float for name in JOINT_NAMES}
-    obs_hw.update({name: (3, CAM_HEIGHT, CAM_WIDTH) for name in CAMERAS})
-    obs_features = hw_to_dataset_features(obs_hw, prefix="observation", use_video=False)
-    for camera_name in CAMERAS:
-        obs_features[f"observation.images.{camera_name}"]["names"] = ["channels", "height", "width"]
-
-    action_hw = {name: float for name in JOINT_NAMES}
-    action_features = hw_to_dataset_features(action_hw, prefix="action", use_video=False)
-    return combine_feature_dicts(obs_features, action_features)
+def build_dataset_frame(features: dict, raw_obs: dict, prefix: str = "observation") -> dict:
+    frame = {
+        f"{prefix}.image": raw_obs["image"],
+        f"{prefix}.wrist_image": raw_obs["wrist_image"],
+        f"{prefix}.state": np.asarray(raw_obs["state"], dtype=np.float32),
+        f"{prefix}.tactile": np.asarray(raw_obs["tactile"], dtype=np.float32),
+    }
+    return frame
 
 
 def _build_policy_frame(raw_obs: dict, features: dict[str, dict], task: str) -> dict:
@@ -148,14 +231,14 @@ def _build_policy_frame(raw_obs: dict, features: dict[str, dict], task: str) -> 
 
 def _ensure_batched(batch: dict, device: torch.device) -> dict:
     for key, value in list(batch.items()):
-        if key.startswith("observation.images.") and isinstance(value, np.ndarray):
+        if key.startswith("observation.") and isinstance(value, np.ndarray):
             value = torch.from_numpy(np.ascontiguousarray(value))
             batch[key] = value
         if not isinstance(value, torch.Tensor):
             continue
-        if key.startswith("observation.images.") and value.ndim == 3:
+        if key in ("observation.image", "observation.wrist_image") and value.ndim == 3:
             value = value.unsqueeze(0)
-        elif key == "observation.state" and value.ndim == 1:
+        elif key in ("observation.state", "observation.tactile") and value.ndim == 1:
             value = value.unsqueeze(0)
         elif key in ("observation.language.tokens", "observation.language.attention_mask") and value.ndim == 1:
             value = value.unsqueeze(0)
@@ -647,7 +730,7 @@ def _write_trace_html(
 
 
 def _parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run SmolVLA inference on smolvla_scene.xml.")
+    parser = argparse.ArgumentParser(description="Run SmolVLA inference on smolvla_tactile_scene.xml.")
     parser.add_argument("--xml", type=Path, default=DEFAULT_XML, help="MuJoCo XML scene path.")
     parser.add_argument("--model-dir", type=Path, default=DEFAULT_MODEL_DIR, help="Local SmolVLA checkpoint.")
     parser.add_argument(
@@ -692,7 +775,7 @@ def main() -> None:
     trace_images_dir = trace_dir / "images"
 
     if not xml.exists():
-        raise FileNotFoundError(f"Missing scene XML: {xml}. Run build_smolvla_scene.py first.")
+        raise FileNotFoundError(f"Missing scene XML: {xml}. Run build_tactile_scene.py first.")
     if not model_dir.exists():
         raise FileNotFoundError(f"Missing SmolVLA checkpoint: {model_dir}")
     if vlm_model_dir is not None and not vlm_model_dir.exists():
@@ -710,9 +793,10 @@ def main() -> None:
     joint_ranges = _joint_ranges(model)
 
     renderer = mujoco.Renderer(model, CAM_HEIGHT, CAM_WIDTH)
+    tactile_sensor_ids = _tactile_sensor_ids(model)
     trace: dict | None = None
     try:
-        raw_obs = _collect_raw_obs(model, data, renderer)
+        raw_obs = _collect_raw_obs(model, data, renderer, tactile_sensor_ids)
         if args.preview:
             _save_preview(raw_obs, args.preview_out)
             print(f"saved preview: {args.preview_out}")
@@ -723,7 +807,9 @@ def main() -> None:
             "scene ready: "
             f"nbody={model.nbody}, njnt={model.njnt}, nu={model.nu}, "
             f"state={frame['observation.state'].shape}, "
-            f"images={[frame[f'observation.images.{cam}'].shape for cam in CAMERAS]}"
+            f"image={frame['observation.image'].shape}, "
+            f"wrist_image={frame['observation.wrist_image'].shape}, "
+            f"tactile={frame['observation.tactile'].shape}"
         )
 
         if args.trace:
@@ -767,7 +853,7 @@ def main() -> None:
                             },
                             {
                                 "name": "render",
-                                "detail": "Capture the three RGB camera observations.",
+                                "detail": "Capture the two RGB camera observations and tactile vector.",
                             },
                         ],
                     }
@@ -793,7 +879,7 @@ def main() -> None:
 
         for step in range(args.steps):
             if step > 0:
-                raw_obs = _collect_raw_obs(model, data, renderer)
+                raw_obs = _collect_raw_obs(model, data, renderer, tactile_sensor_ids)
                 frame = _build_policy_frame(raw_obs, features, args.task)
             state_before = _joint_state(model, data)
             queue_len_before = len(getattr(policy, "_queues", {}).get(ACTION_KEY, []))
@@ -852,7 +938,7 @@ def main() -> None:
                     mujoco.mj_step(model, data)
                 sim_ms = (time.perf_counter() - t3) * 1000.0
                 if trace is not None:
-                    after_obs = _collect_raw_obs(model, data, renderer)
+                    after_obs = _collect_raw_obs(model, data, renderer, tactile_sensor_ids)
                     trace_step["after_image"] = _save_trace_strip(
                         after_obs, trace_images_dir / f"step_{step:03d}_after.png"
                     )
