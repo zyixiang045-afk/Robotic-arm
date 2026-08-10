@@ -37,21 +37,9 @@ README 目前默认这个目录已经存在，但没有给出单独的下载脚�
 
 这个脚本只负责 SmolVLM2 backbone/tokenizer，不会下载 SmolVLA policy 权重。
 脚本默认使用 Hugging Face 镜像，并把文件拉到本地 `models/SmolVLM2-500M-Video-Instruct/`。
+权重在- `https://huggingface.co/datasets/KrisYoung/SmolVLA-DexHand-Tactile-Data`
 
-### 3. 关于你给的 Hugging Face 链接
 
-你给的链接是：
-
-- `https://huggingface.co/datasets/KrisYoung/SmolVLA-DexHand-Tactile-Data/discussions/1`
-
-它确实是数据集讨论页，不是 policy 权重页。真正的权重仓库是：
-
-- `KrisYoung/SmolVLA-DexHand-Tactile-Checkpoints`
-
-我已经把这个权重仓库里的主 checkpoint 下载并迁移到本地。就当前仓库的流程来看，真正会被脚本直接用到的还是本地：
-
-- `models/smolvla_base/`
-- `models/SmolVLM2-500M-Video-Instruct/`
 
 ## 环境相关
 
