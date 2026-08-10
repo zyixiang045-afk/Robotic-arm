@@ -56,6 +56,7 @@ codex/
 .agents/
 .codex/
 .claude/
+setup_env/
 
 # Node/package-manager outputs, in case new tooling is added later.
 node_modules/
@@ -109,3 +110,9 @@ mujoco-3.10.0/model.test/worker_scene/scene_with_robot_3d_py38.xml
 .DS_Store
 Thumbs.db
 .hello.txt.swp
+
+
+.venv-wsl/
+.venv/
+__pycache__/
+*.pyc
