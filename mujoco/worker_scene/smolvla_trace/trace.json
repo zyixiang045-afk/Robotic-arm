@@ -1,0 +1,3423 @@
+{
+  "meta": {
+    "xml": "/home/ee304/jbgs/mujoco-3.10.0/model.test/worker_scene/smolvla_scene.xml",
+    "model_dir": "/home/ee304/jbgs/models/smolvla_base",
+    "vlm_model_dir": "/home/ee304/jbgs/models/SmolVLM2-500M-Video-Instruct",
+    "task": "Pick up the apple on the corner table.",
+    "device": "cpu",
+    "steps": 50,
+    "apply": true,
+    "sim_steps_per_action": 20,
+    "scene_check_only": false,
+    "chunk_size": 50,
+    "n_action_steps": 50,
+    "camera_names": [
+      "camera1",
+      "camera2",
+      "camera3"
+    ]
+  },
+  "steps": [
+    {
+      "step": 0,
+      "scene_check_only": false,
+      "generated_chunk": true,
+      "queue_len_before": 0,
+      "queue_len_after": 49,
+      "obs_image": "images/step_000_obs.png",
+      "after_image": "images/step_000_after.png",
+      "state_before": {
+        "joint_1": 0.0,
+        "joint_2": 1.05,
+        "joint_3": 0.6,
+        "joint_4": 0.0,
+        "joint_5": 0.9,
+        "joint_6": 0.0
+      },
+      "state_after": {
+        "joint_1": -0.0068271106700446005,
+        "joint_2": 1.0421529939360292,
+        "joint_3": 0.5996268652322697,
+        "joint_4": -0.005257233109300737,
+        "joint_5": 0.9263958097933079,
+        "joint_6": 0.02476723121198943
+      },
+      "action": {
+        "joint_1": -0.05088254064321518,
+        "joint_2": 0.9925901293754578,
+        "joint_3": 0.5925522446632385,
+        "joint_4": -0.028456326574087143,
+        "joint_5": 1.0366510152816772,
+        "joint_6": 0.1283089518547058
+      },
+      "action_chunk": [
+        {
+          "joint_1": -0.05088254064321518,
+          "joint_2": 0.9925901293754578,
+          "joint_3": 0.5925522446632385,
+          "joint_4": -0.028456326574087143,
+          "joint_5": 1.0366510152816772,
+          "joint_6": 0.1283089518547058
+        },
+        {
+          "joint_1": 0.06231442093849182,
+          "joint_2": 0.917296290397644,
+          "joint_3": 0.5788074135780334,
+          "joint_4": -0.14733827114105225,
+          "joint_5": 1.076561450958252,
+          "joint_6": 0.24158939719200134
+        },
+        {
+          "joint_1": 0.13225778937339783,
+          "joint_2": 0.8522440791130066,
+          "joint_3": 0.5505726933479309,
+          "joint_4": -0.24114224314689636,
+          "joint_5": 1.1819958686828613,
+          "joint_6": 0.21140167117118835
+        },
+        {
+          "joint_1": 0.12842155992984772,
+          "joint_2": 0.814410924911499,
+          "joint_3": 0.5631663203239441,
+          "joint_4": -0.2022903561592102,
+          "joint_5": 1.1721930503845215,
+          "joint_6": 0.15910130739212036
+        },
+        {
+          "joint_1": 0.07225140929222107,
+          "joint_2": 0.8289369940757751,
+          "joint_3": 0.6084997653961182,
+          "joint_4": -0.19480520486831665,
+          "joint_5": 1.1215593814849854,
+          "joint_6": 0.12683425843715668
+        },
+        {
+          "joint_1": 0.03713664039969444,
+          "joint_2": 0.8239129781723022,
+          "joint_3": 0.6157882809638977,
+          "joint_4": -0.19145363569259644,
+          "joint_5": 1.0854698419570923,
+          "joint_6": -0.07251939177513123
+        },
+        {
+          "joint_1": 0.09546736627817154,
+          "joint_2": 0.8284825086593628,
+          "joint_3": 0.6593109369277954,
+          "joint_4": -0.2539330720901489,
+          "joint_5": 1.0952075719833374,
+          "joint_6": -0.5736749768257141
+        },
+        {
+          "joint_1": 0.06651425361633301,
+          "joint_2": 0.8022972345352173,
+          "joint_3": 0.7152588963508606,
+          "joint_4": -0.3542076647281647,
+          "joint_5": 1.1368640661239624,
+          "joint_6": -0.48605382442474365
+        },
+        {
+          "joint_1": 0.05826064199209213,
+          "joint_2": 0.8672817945480347,
+          "joint_3": 0.7231627106666565,
+          "joint_4": -0.3122127950191498,
+          "joint_5": 1.1681123971939087,
+          "joint_6": -0.5277796983718872
+        },
+        {
+          "joint_1": 0.03718962520360947,
+          "joint_2": 0.9378322958946228,
+          "joint_3": 0.7586395740509033,
+          "joint_4": -0.2899072468280792,
+          "joint_5": 1.2817940711975098,
+          "joint_6": -0.4877806007862091
+        },
+        {
+          "joint_1": 0.07110683619976044,
+          "joint_2": 0.9974243640899658,
+          "joint_3": 0.8234297037124634,
+          "joint_4": -0.27693501114845276,
+          "joint_5": 1.265244483947754,
+          "joint_6": -0.358498752117157
+        },
+        {
+          "joint_1": 0.07407889515161514,
+          "joint_2": 1.0635945796966553,
+          "joint_3": 0.8799357414245605,
+          "joint_4": -0.2589554190635681,
+          "joint_5": 1.2777197360992432,
+          "joint_6": -0.2744421362876892
+        },
+        {
+          "joint_1": 0.06153936684131622,
+          "joint_2": 1.0644545555114746,
+          "joint_3": 0.8589438796043396,
+          "joint_4": -0.2535589933395386,
+          "joint_5": 1.307108759880066,
+          "joint_6": -0.36848464608192444
+        },
+        {
+          "joint_1": 0.06427684426307678,
+          "joint_2": 1.0785309076309204,
+          "joint_3": 0.8627064824104309,
+          "joint_4": -0.20169860124588013,
+          "joint_5": 1.3008456230163574,
+          "joint_6": -0.38311412930488586
+        },
+        {
+          "joint_1": 0.0728318840265274,
+          "joint_2": 1.104782223701477,
+          "joint_3": 0.8708634376525879,
+          "joint_4": -0.1607188880443573,
+          "joint_5": 1.299117088317871,
+          "joint_6": -0.41167593002319336
+        },
+        {
+          "joint_1": 0.0839601457118988,
+          "joint_2": 1.1153924465179443,
+          "joint_3": 0.8800447583198547,
+          "joint_4": -0.07898355275392532,
+          "joint_5": 1.3057411909103394,
+          "joint_6": -0.25091350078582764
+        },
+        {
+          "joint_1": 0.0792321190237999,
+          "joint_2": 1.0991276502609253,
+          "joint_3": 0.8736662864685059,
+          "joint_4": -0.0044221431016922,
+          "joint_5": 1.283584475517273,
+          "joint_6": -0.14723941683769226
+        },
+        {
+          "joint_1": 0.09404025226831436,
+          "joint_2": 1.125788927078247,
+          "joint_3": 0.8732576370239258,
+          "joint_4": 0.09662629663944244,
+          "joint_5": 1.2542120218276978,
+          "joint_6": -0.03691339120268822
+        },
+        {
+          "joint_1": 0.06536917388439178,
+          "joint_2": 1.1191067695617676,
+          "joint_3": 0.8652189373970032,
+          "joint_4": 0.13216036558151245,
+          "joint_5": 1.1989165544509888,
+          "joint_6": -0.025807909667491913
+        },
+        {
+          "joint_1": 0.10193134099245071,
+          "joint_2": 1.1140546798706055,
+          "joint_3": 0.8770265579223633,
+          "joint_4": 0.2433302104473114,
+          "joint_5": 1.1937527656555176,
+          "joint_6": 0.0938611701130867
+        },
+        {
+          "joint_1": 0.10683324933052063,
+          "joint_2": 1.088531494140625,
+          "joint_3": 0.8689302802085876,
+          "joint_4": 0.13778568804264069,
+          "joint_5": 1.1900084018707275,
+          "joint_6": -0.05692875385284424
+        },
+        {
+          "joint_1": 0.09012078493833542,
+          "joint_2": 1.1454592943191528,
+          "joint_3": 0.885903000831604,
+          "joint_4": 0.23776087164878845,
+          "joint_5": 1.1572597026824951,
+          "joint_6": -0.06763234734535217
+        },
+        {
+          "joint_1": 0.05311639606952667,
+          "joint_2": 1.1566194295883179,
+          "joint_3": 0.8453054428100586,
+          "joint_4": 0.2863926291465759,
+          "joint_5": 1.188973307609558,
+          "joint_6": -0.19040782749652863
+        },
+        {
+          "joint_1": 0.022502727806568146,
+          "joint_2": 1.1668676137924194,
+          "joint_3": 0.825136125087738,
+          "joint_4": 0.2920355498790741,
+          "joint_5": 1.1989779472351074,
+          "joint_6": -0.1947166919708252
+        },
+        {
+          "joint_1": 0.019841056317090988,
+          "joint_2": 1.1671501398086548,
+          "joint_3": 0.8375083208084106,
+          "joint_4": 0.3205017149448395,
+          "joint_5": 1.2133008241653442,
+          "joint_6": -0.3394657075405121
+        },
+        {
+          "joint_1": -0.006042271852493286,
+          "joint_2": 1.1835687160491943,
+          "joint_3": 0.8242686986923218,
+          "joint_4": 0.334500253200531,
+          "joint_5": 1.2148253917694092,
+          "joint_6": -0.4994368255138397
+        },
+        {
+          "joint_1": -0.02730720490217209,
+          "joint_2": 1.1651614904403687,
+          "joint_3": 0.8274710774421692,
+          "joint_4": 0.3534642159938812,
+          "joint_5": 1.2408939599990845,
+          "joint_6": -0.44604015350341797
+        },
+        {
+          "joint_1": -0.059529222548007965,
+          "joint_2": 1.121079444885254,
+          "joint_3": 0.8487100005149841,
+          "joint_4": 0.37467020750045776,
+          "joint_5": 1.2410056591033936,
+          "joint_6": -0.4585529565811157
+        },
+        {
+          "joint_1": -0.07287910580635071,
+          "joint_2": 1.092221975326538,
+          "joint_3": 0.8881027698516846,
+          "joint_4": 0.34455376863479614,
+          "joint_5": 1.2101423740386963,
+          "joint_6": -0.4612489938735962
+        },
+        {
+          "joint_1": -0.11742378771305084,
+          "joint_2": 1.0794706344604492,
+          "joint_3": 0.8679859042167664,
+          "joint_4": 0.3239348828792572,
+          "joint_5": 1.175024151802063,
+          "joint_6": -0.398842990398407
+        },
+        {
+          "joint_1": -0.12223991751670837,
+          "joint_2": 1.0028133392333984,
+          "joint_3": 0.825299859046936,
+          "joint_4": 0.25052088499069214,
+          "joint_5": 1.1617021560668945,
+          "joint_6": -0.056573182344436646
+        },
+        {
+          "joint_1": -0.10025179386138916,
+          "joint_2": 1.0306429862976074,
+          "joint_3": 0.8127722144126892,
+          "joint_4": 0.22524428367614746,
+          "joint_5": 1.1772269010543823,
+          "joint_6": -0.17351272702217102
+        },
+        {
+          "joint_1": -0.1208885908126831,
+          "joint_2": 0.9893481731414795,
+          "joint_3": 0.7571173906326294,
+          "joint_4": 0.2576206922531128,
+          "joint_5": 1.1760486364364624,
+          "joint_6": 0.06582769006490707
+        },
+        {
+          "joint_1": -0.12201758474111557,
+          "joint_2": 0.8272191286087036,
+          "joint_3": 0.5809503197669983,
+          "joint_4": 0.1949743628501892,
+          "joint_5": 1.1837419271469116,
+          "joint_6": 0.14185452461242676
+        },
+        {
+          "joint_1": -0.203639417886734,
+          "joint_2": 0.7647342085838318,
+          "joint_3": 0.43344658613204956,
+          "joint_4": 0.2422337532043457,
+          "joint_5": 1.2041053771972656,
+          "joint_6": 0.1727825105190277
+        },
+        {
+          "joint_1": -0.3206423819065094,
+          "joint_2": 0.8028109073638916,
+          "joint_3": 0.30697035789489746,
+          "joint_4": 0.22540947794914246,
+          "joint_5": 1.2239623069763184,
+          "joint_6": 0.08636651933193207
+        },
+        {
+          "joint_1": -0.23560969531536102,
+          "joint_2": 0.579485297203064,
+          "joint_3": 0.1392878144979477,
+          "joint_4": 0.08368164300918579,
+          "joint_5": 1.3347570896148682,
+          "joint_6": 0.10359268635511398
+        },
+        {
+          "joint_1": -0.14558586478233337,
+          "joint_2": 0.36421045660972595,
+          "joint_3": 0.01907668262720108,
+          "joint_4": 0.05375494435429573,
+          "joint_5": 1.365188717842102,
+          "joint_6": 0.3046077489852905
+        },
+        {
+          "joint_1": -0.15364894270896912,
+          "joint_2": 0.30963557958602905,
+          "joint_3": -0.011252453550696373,
+          "joint_4": 0.043437421321868896,
+          "joint_5": 1.3316442966461182,
+          "joint_6": 0.30529484152793884
+        },
+        {
+          "joint_1": -0.14697006344795227,
+          "joint_2": 0.16909068822860718,
+          "joint_3": -0.0409078523516655,
+          "joint_4": -0.002368014305830002,
+          "joint_5": 1.3501362800598145,
+          "joint_6": 0.3960396647453308
+        },
+        {
+          "joint_1": -0.18209399282932281,
+          "joint_2": 0.09483734518289566,
+          "joint_3": -0.013415120542049408,
+          "joint_4": 0.007888838648796082,
+          "joint_5": 1.25630784034729,
+          "joint_6": 0.3148755431175232
+        },
+        {
+          "joint_1": -0.17421123385429382,
+          "joint_2": -0.1434118151664734,
+          "joint_3": -0.040098801255226135,
+          "joint_4": -0.053625233471393585,
+          "joint_5": 1.2044975757598877,
+          "joint_6": 0.3568233549594879
+        },
+        {
+          "joint_1": -0.1831180453300476,
+          "joint_2": -0.15654286742210388,
+          "joint_3": -0.09827429056167603,
+          "joint_4": -0.017902836203575134,
+          "joint_5": 1.2114245891571045,
+          "joint_6": 0.32425326108932495
+        },
+        {
+          "joint_1": -0.2530815005302429,
+          "joint_2": -0.22387507557868958,
+          "joint_3": -0.1605663150548935,
+          "joint_4": -0.003501472994685173,
+          "joint_5": 1.2250195741653442,
+          "joint_6": 0.5041956305503845
+        },
+        {
+          "joint_1": -0.26391342282295227,
+          "joint_2": -0.3567742109298706,
+          "joint_3": -0.23230960965156555,
+          "joint_4": 0.011021511629223824,
+          "joint_5": 1.235444188117981,
+          "joint_6": 0.5511561036109924
+        },
+        {
+          "joint_1": -0.25680261850357056,
+          "joint_2": -0.2782691717147827,
+          "joint_3": -0.17082467675209045,
+          "joint_4": -0.008724257349967957,
+          "joint_5": 1.2094756364822388,
+          "joint_6": 0.5004645586013794
+        },
+        {
+          "joint_1": -0.2638177275657654,
+          "joint_2": -0.3645714521408081,
+          "joint_3": -0.13032686710357666,
+          "joint_4": -0.022572455927729607,
+          "joint_5": 1.162506103515625,
+          "joint_6": 0.441792368888855
+        },
+        {
+          "joint_1": -0.2772311866283417,
+          "joint_2": -0.3027437925338745,
+          "joint_3": -0.09710812568664551,
+          "joint_4": -0.07767820358276367,
+          "joint_5": 1.1612051725387573,
+          "joint_6": 0.3997246026992798
+        },
+        {
+          "joint_1": -0.2771105468273163,
+          "joint_2": -0.362551212310791,
+          "joint_3": 0.00015880167484283447,
+          "joint_4": -0.11720094084739685,
+          "joint_5": 1.1316766738891602,
+          "joint_6": 0.44493624567985535
+        },
+        {
+          "joint_1": -0.21647042036056519,
+          "joint_2": -0.2906140089035034,
+          "joint_3": -0.0019689276814460754,
+          "joint_4": -0.1498795449733734,
+          "joint_5": 1.1280401945114136,
+          "joint_6": 0.4451265335083008
+        }
+      ],
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 3.1638192012906075
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 5821.395027451217
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.23563671857118607
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.34002773463726044
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 49,
+      "queue_len_after": 48,
+      "obs_image": "images/step_001_obs.png",
+      "after_image": "images/step_001_after.png",
+      "state_before": {
+        "joint_1": -0.0068271106700446005,
+        "joint_2": 1.0421529939360292,
+        "joint_3": 0.5996268652322697,
+        "joint_4": -0.005257233109300737,
+        "joint_5": 0.9263958097933079,
+        "joint_6": 0.02476723121198943
+      },
+      "state_after": {
+        "joint_1": 0.00030913351433567264,
+        "joint_2": 1.0225189124328884,
+        "joint_3": 0.5973359271835098,
+        "joint_4": -0.033044348662830264,
+        "joint_5": 0.9555805317170891,
+        "joint_6": 0.06662320269682366
+      },
+      "action": {
+        "joint_1": 0.06231442093849182,
+        "joint_2": 0.917296290397644,
+        "joint_3": 0.5788074135780334,
+        "joint_4": -0.14733827114105225,
+        "joint_5": 1.076561450958252,
+        "joint_6": 0.24158939719200134
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.8777184411883354
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7535611987113953
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.13241637498140335
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2734847366809845
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 48,
+      "queue_len_after": 47,
+      "obs_image": "images/step_002_obs.png",
+      "after_image": "images/step_002_after.png",
+      "state_before": {
+        "joint_1": 0.00030913351433567264,
+        "joint_2": 1.0225189124328884,
+        "joint_3": 0.5973359271835098,
+        "joint_4": -0.033044348662830264,
+        "joint_5": 0.9555805317170891,
+        "joint_6": 0.06662320269682366
+      },
+      "state_after": {
+        "joint_1": 0.022636844147124073,
+        "joint_2": 0.9930201345841201,
+        "joint_3": 0.5895279063582317,
+        "joint_4": -0.0733845446291527,
+        "joint_5": 0.9993714525475735,
+        "joint_6": 0.09457220683163005
+      },
+      "action": {
+        "joint_1": 0.13225778937339783,
+        "joint_2": 0.8522440791130066,
+        "joint_3": 0.5505726933479309,
+        "joint_4": -0.24114224314689636,
+        "joint_5": 1.1819958686828613,
+        "joint_6": 0.21140167117118835
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7453141734004021
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7408104613423347
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12568291276693344
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.26445090770721436
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 47,
+      "queue_len_after": 46,
+      "obs_image": "images/step_003_obs.png",
+      "after_image": "images/step_003_after.png",
+      "state_before": {
+        "joint_1": 0.022636844147124073,
+        "joint_2": 0.9930201345841201,
+        "joint_3": 0.5895279063582317,
+        "joint_4": -0.0733845446291527,
+        "joint_5": 0.9993714525475735,
+        "joint_6": 0.09457220683163005
+      },
+      "state_after": {
+        "joint_1": 0.044350921177134975,
+        "joint_2": 0.9588424603805282,
+        "joint_3": 0.5844589792790732,
+        "joint_4": -0.09821797789654818,
+        "joint_5": 1.0327322817177982,
+        "joint_6": 0.10702876262156798
+      },
+      "action": {
+        "joint_1": 0.12842155992984772,
+        "joint_2": 0.814410924911499,
+        "joint_3": 0.5631663203239441,
+        "joint_4": -0.2022903561592102,
+        "joint_5": 1.1721930503845215,
+        "joint_6": 0.15910130739212036
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7780874148011208
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7372965812683105
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.14513637870550156
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.27512479573488235
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 46,
+      "queue_len_after": 45,
+      "obs_image": "images/step_004_obs.png",
+      "after_image": "images/step_004_after.png",
+      "state_before": {
+        "joint_1": 0.044350921177134975,
+        "joint_2": 0.9588424603805282,
+        "joint_3": 0.5844589792790732,
+        "joint_4": -0.09821797789654818,
+        "joint_5": 1.0327322817177982,
+        "joint_6": 0.10702876262156798
+      },
+      "state_after": {
+        "joint_1": 0.053885281390494616,
+        "joint_2": 0.9299066042806503,
+        "joint_3": 0.5875218633499236,
+        "joint_4": -0.11660868398179688,
+        "joint_5": 1.0497149758314086,
+        "joint_6": 0.11085141939010902
+      },
+      "action": {
+        "joint_1": 0.07225140929222107,
+        "joint_2": 0.8289369940757751,
+        "joint_3": 0.6084997653961182,
+        "joint_4": -0.19480520486831665,
+        "joint_5": 1.1215593814849854,
+        "joint_6": 0.12683425843715668
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7330849766731262
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.678398810327053
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.1219017431139946
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2697836607694626
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 45,
+      "queue_len_after": 44,
+      "obs_image": "images/step_005_obs.png",
+      "after_image": "images/step_005_after.png",
+      "state_before": {
+        "joint_1": 0.053885281390494616,
+        "joint_2": 0.9299066042806503,
+        "joint_3": 0.5875218633499236,
+        "joint_4": -0.11660868398179688,
+        "joint_5": 1.0497149758314086,
+        "joint_6": 0.11085141939010902
+      },
+      "state_after": {
+        "joint_1": 0.05292697878260608,
+        "joint_2": 0.9077499824057476,
+        "joint_3": 0.5923658353985329,
+        "joint_4": -0.13090977858723007,
+        "joint_5": 1.05657953082876,
+        "joint_6": 0.07545456913602515
+      },
+      "action": {
+        "joint_1": 0.03713664039969444,
+        "joint_2": 0.8239129781723022,
+        "joint_3": 0.6157882809638977,
+        "joint_4": -0.19145363569259644,
+        "joint_5": 1.0854698419570923,
+        "joint_6": -0.07251939177513123
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7386412471532822
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.707363873720169
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12408290058374405
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2888161689043045
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 44,
+      "queue_len_after": 43,
+      "obs_image": "images/step_006_obs.png",
+      "after_image": "images/step_006_after.png",
+      "state_before": {
+        "joint_1": 0.05292697878260608,
+        "joint_2": 0.9077499824057476,
+        "joint_3": 0.5923658353985329,
+        "joint_4": -0.13090977858723007,
+        "joint_5": 1.05657953082876,
+        "joint_6": 0.07545456913602515
+      },
+      "state_after": {
+        "joint_1": 0.05831942672103234,
+        "joint_2": 0.8899024593096769,
+        "joint_3": 0.604201152676947,
+        "joint_4": -0.15489866466006846,
+        "joint_5": 1.0639186849548359,
+        "joint_6": -0.04984856363155778
+      },
+      "action": {
+        "joint_1": 0.09546736627817154,
+        "joint_2": 0.8284825086593628,
+        "joint_3": 0.6593109369277954,
+        "joint_4": -0.2539330720901489,
+        "joint_5": 1.0952075719833374,
+        "joint_6": -0.5736749768257141
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.8400715887546539
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.724686473608017
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.14784373342990875
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2674246206879616
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 43,
+      "queue_len_after": 42,
+      "obs_image": "images/step_007_obs.png",
+      "after_image": "images/step_007_after.png",
+      "state_before": {
+        "joint_1": 0.05831942672103234,
+        "joint_2": 0.8899024593096769,
+        "joint_3": 0.604201152676947,
+        "joint_4": -0.15489866466006846,
+        "joint_5": 1.0639186849548359,
+        "joint_6": -0.04984856363155778
+      },
+      "state_after": {
+        "joint_1": 0.06199451023237468,
+        "joint_2": 0.8723628308312389,
+        "joint_3": 0.6251999029090635,
+        "joint_4": -0.193176460261832,
+        "joint_5": 1.0778665382601806,
+        "joint_6": -0.13405455342623135
+      },
+      "action": {
+        "joint_1": 0.06651425361633301,
+        "joint_2": 0.8022972345352173,
+        "joint_3": 0.7152588963508606,
+        "joint_4": -0.3542076647281647,
+        "joint_5": 1.1368640661239624,
+        "joint_6": -0.48605382442474365
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7679956033825874
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7594434320926666
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.1267939805984497
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.29531028121709824
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 42,
+      "queue_len_after": 41,
+      "obs_image": "images/step_008_obs.png",
+      "after_image": "images/step_008_after.png",
+      "state_before": {
+        "joint_1": 0.06199451023237468,
+        "joint_2": 0.8723628308312389,
+        "joint_3": 0.6251999029090635,
+        "joint_4": -0.193176460261832,
+        "joint_5": 1.0778665382601806,
+        "joint_6": -0.13405455342623135
+      },
+      "state_after": {
+        "joint_1": 0.061530260552536506,
+        "joint_2": 0.8667503501456318,
+        "joint_3": 0.642414695377263,
+        "joint_4": -0.21626261762109705,
+        "joint_5": 1.0951459907887144,
+        "joint_6": -0.21005899625881097
+      },
+      "action": {
+        "joint_1": 0.05826064199209213,
+        "joint_2": 0.8672817945480347,
+        "joint_3": 0.7231627106666565,
+        "joint_4": -0.3122127950191498,
+        "joint_5": 1.1681123971939087,
+        "joint_6": -0.5277796983718872
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7193814963102341
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7415909096598625
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11606048792600632
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2578534185886383
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 41,
+      "queue_len_after": 40,
+      "obs_image": "images/step_009_obs.png",
+      "after_image": "images/step_009_after.png",
+      "state_before": {
+        "joint_1": 0.061530260552536506,
+        "joint_2": 0.8667503501456318,
+        "joint_3": 0.642414695377263,
+        "joint_4": -0.21626261762109705,
+        "joint_5": 1.0951459907887144,
+        "joint_6": -0.21005899625881097
+      },
+      "state_after": {
+        "joint_1": 0.05769425654092602,
+        "joint_2": 0.8753642466562374,
+        "joint_3": 0.6627396642018378,
+        "joint_4": -0.23054114635241493,
+        "joint_5": 1.1308855541637295,
+        "joint_6": -0.26367055010912976
+      },
+      "action": {
+        "joint_1": 0.03718962520360947,
+        "joint_2": 0.9378322958946228,
+        "joint_3": 0.7586395740509033,
+        "joint_4": -0.2899072468280792,
+        "joint_5": 1.2817940711975098,
+        "joint_6": -0.4877806007862091
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7296083495020866
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6825515776872635
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.1379074528813362
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.30087586492300034
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 40,
+      "queue_len_after": 39,
+      "obs_image": "images/step_010_obs.png",
+      "after_image": "images/step_010_after.png",
+      "state_before": {
+        "joint_1": 0.05769425654092602,
+        "joint_2": 0.8753642466562374,
+        "joint_3": 0.6627396642018378,
+        "joint_4": -0.23054114635241493,
+        "joint_5": 1.1308855541637295,
+        "joint_6": -0.26367055010912976
+      },
+      "state_after": {
+        "joint_1": 0.058261984106328234,
+        "joint_2": 0.8950923840271475,
+        "joint_3": 0.6922118880838628,
+        "joint_4": -0.23976795466398945,
+        "joint_5": 1.1567165699254947,
+        "joint_6": -0.2819765699238774
+      },
+      "action": {
+        "joint_1": 0.07110683619976044,
+        "joint_2": 0.9974243640899658,
+        "joint_3": 0.8234297037124634,
+        "joint_4": -0.27693501114845276,
+        "joint_5": 1.265244483947754,
+        "joint_6": -0.358498752117157
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7471991702914238
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7759259790182114
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.1229364424943924
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2642916515469551
+        }
+      ]
+    },
+    {
+      "step": 11,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 39,
+      "queue_len_after": 38,
+      "obs_image": "images/step_011_obs.png",
+      "after_image": "images/step_011_after.png",
+      "state_before": {
+        "joint_1": 0.058261984106328234,
+        "joint_2": 0.8950923840271475,
+        "joint_3": 0.6922118880838628,
+        "joint_4": -0.23976795466398945,
+        "joint_5": 1.1567165699254947,
+        "joint_6": -0.2819765699238774
+      },
+      "state_after": {
+        "joint_1": 0.061075435741014476,
+        "joint_2": 0.9245883307196077,
+        "joint_3": 0.7271509315770268,
+        "joint_4": -0.24357822848151675,
+        "joint_5": 1.1799276677492383,
+        "joint_6": -0.2805224881858434
+      },
+      "action": {
+        "joint_1": 0.07407889515161514,
+        "joint_2": 1.0635945796966553,
+        "joint_3": 0.8799357414245605,
+        "joint_4": -0.2589554190635681,
+        "joint_5": 1.2777197360992432,
+        "joint_6": -0.2744421362876892
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7482357323169708
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7194990068674088
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.13000983744859695
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2658618614077568
+        }
+      ]
+    },
+    {
+      "step": 12,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 38,
+      "queue_len_after": 37,
+      "obs_image": "images/step_012_obs.png",
+      "after_image": "images/step_012_after.png",
+      "state_before": {
+        "joint_1": 0.061075435741014476,
+        "joint_2": 0.9245883307196077,
+        "joint_3": 0.7271509315770268,
+        "joint_4": -0.24357822848151675,
+        "joint_5": 1.1799276677492383,
+        "joint_6": -0.2805224881858434
+      },
+      "state_after": {
+        "joint_1": 0.061903947347555735,
+        "joint_2": 0.9544829325390022,
+        "joint_3": 0.7537659993370165,
+        "joint_4": -0.245373328670488,
+        "joint_5": 1.2045461811587594,
+        "joint_6": -0.2975024001780088
+      },
+      "action": {
+        "joint_1": 0.06153936684131622,
+        "joint_2": 1.0644545555114746,
+        "joint_3": 0.8589438796043396,
+        "joint_4": -0.2535589933395386,
+        "joint_5": 1.307108759880066,
+        "joint_6": -0.36848464608192444
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7816236466169357
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7069783061742783
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12078974395990372
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.30275527387857437
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 37,
+      "queue_len_after": 36,
+      "obs_image": "images/step_013_obs.png",
+      "after_image": "images/step_013_after.png",
+      "state_before": {
+        "joint_1": 0.061903947347555735,
+        "joint_2": 0.9544829325390022,
+        "joint_3": 0.7537659993370165,
+        "joint_4": -0.245373328670488,
+        "joint_5": 1.2045461811587594,
+        "joint_6": -0.2975024001780088
+      },
+      "state_after": {
+        "joint_1": 0.062038757630220986,
+        "joint_2": 0.9800882134379186,
+        "joint_3": 0.7754635425377958,
+        "joint_4": -0.23696210543670862,
+        "joint_5": 1.2231983465099698,
+        "joint_6": -0.314029003858324
+      },
+      "action": {
+        "joint_1": 0.06427684426307678,
+        "joint_2": 1.0785309076309204,
+        "joint_3": 0.8627064824104309,
+        "joint_4": -0.20169860124588013,
+        "joint_5": 1.3008456230163574,
+        "joint_6": -0.38311412930488586
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7623210549354553
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.666579395532608
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12486521154642105
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2681668847799301
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 36,
+      "queue_len_after": 35,
+      "obs_image": "images/step_014_obs.png",
+      "after_image": "images/step_014_after.png",
+      "state_before": {
+        "joint_1": 0.062038757630220986,
+        "joint_2": 0.9800882134379186,
+        "joint_3": 0.7754635425377958,
+        "joint_4": -0.23696210543670862,
+        "joint_5": 1.2231983465099698,
+        "joint_6": -0.314029003858324
+      },
+      "state_after": {
+        "joint_1": 0.0635559395833749,
+        "joint_2": 1.0046343248096359,
+        "joint_3": 0.7940813672438795,
+        "joint_4": -0.22229721778629963,
+        "joint_5": 1.2378790102844635,
+        "joint_6": -0.3328785705532013
+      },
+      "action": {
+        "joint_1": 0.0728318840265274,
+        "joint_2": 1.104782223701477,
+        "joint_3": 0.8708634376525879,
+        "joint_4": -0.1607188880443573,
+        "joint_5": 1.299117088317871,
+        "joint_6": -0.41167593002319336
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7646046578884125
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7628958448767662
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11891592293977737
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.26740599423646927
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 35,
+      "queue_len_after": 34,
+      "obs_image": "images/step_015_obs.png",
+      "after_image": "images/step_015_after.png",
+      "state_before": {
+        "joint_1": 0.0635559395833749,
+        "joint_2": 1.0046343248096359,
+        "joint_3": 0.7940813672438795,
+        "joint_4": -0.22229721778629963,
+        "joint_5": 1.2378790102844635,
+        "joint_6": -0.3328785705532013
+      },
+      "state_after": {
+        "joint_1": 0.06674311577484632,
+        "joint_2": 1.027081783606919,
+        "joint_3": 0.8110504975221093,
+        "joint_4": -0.19471462380192378,
+        "joint_5": 1.2509961265800067,
+        "joint_6": -0.31705737378125964
+      },
+      "action": {
+        "joint_1": 0.0839601457118988,
+        "joint_2": 1.1153924465179443,
+        "joint_3": 0.8800447583198547,
+        "joint_4": -0.07898355275392532,
+        "joint_5": 1.3057411909103394,
+        "joint_6": -0.25091350078582764
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.8264537900686264
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6782572492957115
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.1359274610877037
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.269206240773201
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 34,
+      "queue_len_after": 33,
+      "obs_image": "images/step_016_obs.png",
+      "after_image": "images/step_016_after.png",
+      "state_before": {
+        "joint_1": 0.06674311577484632,
+        "joint_2": 1.027081783606919,
+        "joint_3": 0.8110504975221093,
+        "joint_4": -0.19471462380192378,
+        "joint_5": 1.2509961265800067,
+        "joint_6": -0.31705737378125964
+      },
+      "state_after": {
+        "joint_1": 0.06935310759820647,
+        "joint_2": 1.043664525366387,
+        "joint_3": 0.8242053515375416,
+        "joint_4": -0.15794313587953493,
+        "joint_5": 1.257374518756969,
+        "joint_6": -0.28427689271495005
+      },
+      "action": {
+        "joint_1": 0.0792321190237999,
+        "joint_2": 1.0991276502609253,
+        "joint_3": 0.8736662864685059,
+        "joint_4": -0.0044221431016922,
+        "joint_5": 1.283584475517273,
+        "joint_6": -0.14723941683769226
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7287999615073204
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7274599522352219
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12111291289329529
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.26455987244844437
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 33,
+      "queue_len_after": 32,
+      "obs_image": "images/step_017_obs.png",
+      "after_image": "images/step_017_after.png",
+      "state_before": {
+        "joint_1": 0.06935310759820647,
+        "joint_2": 1.043664525366387,
+        "joint_3": 0.8242053515375416,
+        "joint_4": -0.15794313587953493,
+        "joint_5": 1.257374518756969,
+        "joint_6": -0.28427689271495005
+      },
+      "state_after": {
+        "joint_1": 0.07323881578213036,
+        "joint_2": 1.0594186439720212,
+        "joint_3": 0.8337355489436097,
+        "joint_4": -0.10891304748604393,
+        "joint_5": 1.256817447135017,
+        "joint_6": -0.23652670672519502
+      },
+      "action": {
+        "joint_1": 0.09404025226831436,
+        "joint_2": 1.125788927078247,
+        "joint_3": 0.8732576370239258,
+        "joint_4": 0.09662629663944244,
+        "joint_5": 1.2542120218276978,
+        "joint_6": -0.03691339120268822
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7364023476839066
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7221244052052498
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.13551954180002213
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.26038195937871933
+        }
+      ]
+    },
+    {
+      "step": 18,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 32,
+      "queue_len_after": 31,
+      "obs_image": "images/step_018_obs.png",
+      "after_image": "images/step_018_after.png",
+      "state_before": {
+        "joint_1": 0.07323881578213036,
+        "joint_2": 1.0594186439720212,
+        "joint_3": 0.8337355489436097,
+        "joint_4": -0.10891304748604393,
+        "joint_5": 1.256817447135017,
+        "joint_6": -0.23652670672519502
+      },
+      "state_after": {
+        "joint_1": 0.07341475098755157,
+        "joint_2": 1.0726069438990857,
+        "joint_3": 0.8405497407271507,
+        "joint_4": -0.06220498860916071,
+        "joint_5": 1.2457323150577198,
+        "joint_6": -0.1958501434319727
+      },
+      "action": {
+        "joint_1": 0.06536917388439178,
+        "joint_2": 1.1191067695617676,
+        "joint_3": 0.8652189373970032,
+        "joint_4": 0.13216036558151245,
+        "joint_5": 1.1989165544509888,
+        "joint_6": -0.025807909667491913
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7534138858318329
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6741184517741203
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.13198796659708023
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.26230886578559875
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 31,
+      "queue_len_after": 30,
+      "obs_image": "images/step_019_obs.png",
+      "after_image": "images/step_019_after.png",
+      "state_before": {
+        "joint_1": 0.07341475098755157,
+        "joint_2": 1.0726069438990857,
+        "joint_3": 0.8405497407271507,
+        "joint_4": -0.06220498860916071,
+        "joint_5": 1.2457323150577198,
+        "joint_6": -0.1958501434319727
+      },
+      "state_after": {
+        "joint_1": 0.07684775478269693,
+        "joint_2": 1.0816057346876375,
+        "joint_3": 0.8479115143084051,
+        "joint_4": -0.0034243433024663543,
+        "joint_5": 1.2356989745047076,
+        "joint_6": -0.13992488711432435
+      },
+      "action": {
+        "joint_1": 0.10193134099245071,
+        "joint_2": 1.1140546798706055,
+        "joint_3": 0.8770265579223633,
+        "joint_4": 0.2433302104473114,
+        "joint_5": 1.1937527656555176,
+        "joint_6": 0.0938611701130867
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7380461320281029
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7049573361873627
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11967308819293976
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2785809338092804
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 30,
+      "queue_len_after": 29,
+      "obs_image": "images/step_020_obs.png",
+      "after_image": "images/step_020_after.png",
+      "state_before": {
+        "joint_1": 0.07684775478269693,
+        "joint_2": 1.0816057346876375,
+        "joint_3": 0.8479115143084051,
+        "joint_4": -0.0034243433024663543,
+        "joint_5": 1.2356989745047076,
+        "joint_6": -0.13992488711432435
+      },
+      "state_after": {
+        "joint_1": 0.08324089192705753,
+        "joint_2": 1.0851832747414898,
+        "joint_3": 0.8528264499182565,
+        "joint_4": 0.02401806122027141,
+        "joint_5": 1.2269214475408465,
+        "joint_6": -0.12390200386025631
+      },
+      "action": {
+        "joint_1": 0.10683324933052063,
+        "joint_2": 1.088531494140625,
+        "joint_3": 0.8689302802085876,
+        "joint_4": 0.13778568804264069,
+        "joint_5": 1.1900084018707275,
+        "joint_6": -0.05692875385284424
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7688617333769798
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7426405102014542
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11868588626384735
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.26036519557237625
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 29,
+      "queue_len_after": 28,
+      "obs_image": "images/step_021_obs.png",
+      "after_image": "images/step_021_after.png",
+      "state_before": {
+        "joint_1": 0.08324089192705753,
+        "joint_2": 1.0851832747414898,
+        "joint_3": 0.8528264499182565,
+        "joint_4": 0.02401806122027141,
+        "joint_5": 1.2269214475408465,
+        "joint_6": -0.12390200386025631
+      },
+      "state_after": {
+        "joint_1": 0.08547214545321934,
+        "joint_2": 1.0939080148182436,
+        "joint_3": 0.8581635158211487,
+        "joint_4": 0.06529679961373037,
+        "joint_5": 1.2134429563579863,
+        "joint_6": -0.1130399645798239
+      },
+      "action": {
+        "joint_1": 0.09012078493833542,
+        "joint_2": 1.1454592943191528,
+        "joint_3": 0.885903000831604,
+        "joint_4": 0.23776087164878845,
+        "joint_5": 1.1572597026824951,
+        "joint_6": -0.06763234734535217
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7613953202962875
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.71639584004879
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12296624481678009
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.29162317514419556
+        }
+      ]
+    },
+    {
+      "step": 22,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 28,
+      "queue_len_after": 27,
+      "obs_image": "images/step_022_obs.png",
+      "after_image": "images/step_022_after.png",
+      "state_before": {
+        "joint_1": 0.08547214545321934,
+        "joint_2": 1.0939080148182436,
+        "joint_3": 0.8581635158211487,
+        "joint_4": 0.06529679961373037,
+        "joint_5": 1.2134429563579863,
+        "joint_6": -0.1130399645798239
+      },
+      "state_after": {
+        "joint_1": 0.08120184819547077,
+        "joint_2": 1.106687181052842,
+        "joint_3": 0.8560686686138564,
+        "joint_4": 0.10812894519000577,
+        "joint_5": 1.2087587445802648,
+        "joint_6": -0.1279745506114144
+      },
+      "action": {
+        "joint_1": 0.05311639606952667,
+        "joint_2": 1.1566194295883179,
+        "joint_3": 0.8453054428100586,
+        "joint_4": 0.2863926291465759,
+        "joint_5": 1.188973307609558,
+        "joint_6": -0.19040782749652863
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7385099306702614
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7983503639698029
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.1351563259959221
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.26453565806150436
+        }
+      ]
+    },
+    {
+      "step": 23,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 27,
+      "queue_len_after": 26,
+      "obs_image": "images/step_023_obs.png",
+      "after_image": "images/step_023_after.png",
+      "state_before": {
+        "joint_1": 0.08120184819547077,
+        "joint_2": 1.106687181052842,
+        "joint_3": 0.8560686686138564,
+        "joint_4": 0.10812894519000577,
+        "joint_5": 1.2087587445802648,
+        "joint_6": -0.1279745506114144
+      },
+      "state_after": {
+        "joint_1": 0.07137696049114811,
+        "joint_2": 1.118843942669682,
+        "joint_3": 0.8503474841832933,
+        "joint_4": 0.14377398118325208,
+        "joint_5": 1.206899602173163,
+        "joint_6": -0.14085870155149516
+      },
+      "action": {
+        "joint_1": 0.022502727806568146,
+        "joint_2": 1.1668676137924194,
+        "joint_3": 0.825136125087738,
+        "joint_4": 0.2920355498790741,
+        "joint_5": 1.1989779472351074,
+        "joint_6": -0.1947166919708252
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.736018642783165
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7149196937680244
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12249965220689774
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.27090776711702347
+        }
+      ]
+    },
+    {
+      "step": 24,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 26,
+      "queue_len_after": 25,
+      "obs_image": "images/step_024_obs.png",
+      "after_image": "images/step_024_after.png",
+      "state_before": {
+        "joint_1": 0.07137696049114811,
+        "joint_2": 1.118843942669682,
+        "joint_3": 0.8503474841832933,
+        "joint_4": 0.14377398118325208,
+        "joint_5": 1.206899602173163,
+        "joint_6": -0.14085870155149516
+      },
+      "state_after": {
+        "joint_1": 0.061082345739830034,
+        "joint_2": 1.1285147187598026,
+        "joint_3": 0.8478724344995701,
+        "joint_4": 0.17786971582458272,
+        "joint_5": 1.2080929402330234,
+        "joint_6": -0.1791965399934759
+      },
+      "action": {
+        "joint_1": 0.019841056317090988,
+        "joint_2": 1.1671501398086548,
+        "joint_3": 0.8375083208084106,
+        "joint_4": 0.3205017149448395,
+        "joint_5": 1.2133008241653442,
+        "joint_6": -0.3394657075405121
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.8395053446292877
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.725657843053341
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.15510711818933487
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2673109993338585
+        }
+      ]
+    },
+    {
+      "step": 25,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 25,
+      "queue_len_after": 24,
+      "obs_image": "images/step_025_obs.png",
+      "after_image": "images/step_025_after.png",
+      "state_before": {
+        "joint_1": 0.061082345739830034,
+        "joint_2": 1.1285147187598026,
+        "joint_3": 0.8478724344995701,
+        "joint_4": 0.17786971582458272,
+        "joint_5": 1.2080929402330234,
+        "joint_6": -0.1791965399934759
+      },
+      "state_after": {
+        "joint_1": 0.048992649280924144,
+        "joint_2": 1.1390354556323536,
+        "joint_3": 0.8433235040399891,
+        "joint_4": 0.2081886028884592,
+        "joint_5": 1.2094153868260318,
+        "joint_6": -0.24101464716183685
+      },
+      "action": {
+        "joint_1": -0.006042271852493286,
+        "joint_2": 1.1835687160491943,
+        "joint_3": 0.8242686986923218,
+        "joint_4": 0.334500253200531,
+        "joint_5": 1.2148253917694092,
+        "joint_6": -0.4994368255138397
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7681464776396751
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7000595107674599
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12064073234796524
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2842601388692856
+        }
+      ]
+    },
+    {
+      "step": 26,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 24,
+      "queue_len_after": 23,
+      "obs_image": "images/step_026_obs.png",
+      "after_image": "images/step_026_after.png",
+      "state_before": {
+        "joint_1": 0.048992649280924144,
+        "joint_2": 1.1390354556323536,
+        "joint_3": 0.8433235040399891,
+        "joint_4": 0.2081886028884592,
+        "joint_5": 1.2094153868260318,
+        "joint_6": -0.24101464716183685
+      },
+      "state_after": {
+        "joint_1": 0.03475860994308475,
+        "joint_2": 1.1454886026760474,
+        "joint_3": 0.8406774938206512,
+        "joint_4": 0.23626422030341182,
+        "joint_5": 1.2154778216094457,
+        "joint_6": -0.28059324991512263
+      },
+      "action": {
+        "joint_1": -0.02730720490217209,
+        "joint_2": 1.1651614904403687,
+        "joint_3": 0.8274710774421692,
+        "joint_4": 0.3534642159938812,
+        "joint_5": 1.2408939599990845,
+        "joint_6": -0.44604015350341797
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7986826822161674
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6539469361305237
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12428127229213715
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2930322661995888
+        }
+      ]
+    },
+    {
+      "step": 27,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 23,
+      "queue_len_after": 22,
+      "obs_image": "images/step_027_obs.png",
+      "after_image": "images/step_027_after.png",
+      "state_before": {
+        "joint_1": 0.03475860994308475,
+        "joint_2": 1.1454886026760474,
+        "joint_3": 0.8406774938206512,
+        "joint_4": 0.23626422030341182,
+        "joint_5": 1.2154778216094457,
+        "joint_6": -0.28059324991512263
+      },
+      "state_after": {
+        "joint_1": 0.017485421132522532,
+        "joint_2": 1.143095476345605,
+        "joint_3": 0.8429362984868478,
+        "joint_4": 0.26303040411233225,
+        "joint_5": 1.2204175567620343,
+        "joint_6": -0.31494662680486313
+      },
+      "action": {
+        "joint_1": -0.059529222548007965,
+        "joint_2": 1.121079444885254,
+        "joint_3": 0.8487100005149841,
+        "joint_4": 0.37467020750045776,
+        "joint_5": 1.2410056591033936,
+        "joint_6": -0.4585529565811157
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7654326036572456
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.70026533305645
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11814851313829422
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.26511307805776596
+        }
+      ]
+    },
+    {
+      "step": 28,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 22,
+      "queue_len_after": 21,
+      "obs_image": "images/step_028_obs.png",
+      "after_image": "images/step_028_after.png",
+      "state_before": {
+        "joint_1": 0.017485421132522532,
+        "joint_2": 1.143095476345605,
+        "joint_3": 0.8429362984868478,
+        "joint_4": 0.26303040411233225,
+        "joint_5": 1.2204175567620343,
+        "joint_6": -0.31494662680486313
+      },
+      "state_after": {
+        "joint_1": 2.4780422067311185e-05,
+        "joint_2": 1.1340402476218203,
+        "joint_3": 0.8517766960164311,
+        "joint_4": 0.2788060755118138,
+        "joint_5": 1.2184214502246236,
+        "joint_6": -0.3431887372460994
+      },
+      "action": {
+        "joint_1": -0.07287910580635071,
+        "joint_2": 1.092221975326538,
+        "joint_3": 0.8881027698516846,
+        "joint_4": 0.34455376863479614,
+        "joint_5": 1.2101423740386963,
+        "joint_6": -0.4612489938735962
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7453309372067451
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6872650012373924
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.119796022772789
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.26653148233890533
+        }
+      ]
+    },
+    {
+      "step": 29,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 21,
+      "queue_len_after": 20,
+      "obs_image": "images/step_029_obs.png",
+      "after_image": "images/step_029_after.png",
+      "state_before": {
+        "joint_1": 2.4780422067311185e-05,
+        "joint_2": 1.1340402476218203,
+        "joint_3": 0.8517766960164311,
+        "joint_4": 0.2788060755118138,
+        "joint_5": 1.2184214502246236,
+        "joint_6": -0.3431887372460994
+      },
+      "state_after": {
+        "joint_1": -0.021140668229746,
+        "joint_2": 1.124252940379548,
+        "joint_3": 0.8553292892682277,
+        "joint_4": 0.28764286129228117,
+        "joint_5": 1.2101433040490794,
+        "joint_6": -0.35393301411101324
+      },
+      "action": {
+        "joint_1": -0.11742378771305084,
+        "joint_2": 1.0794706344604492,
+        "joint_3": 0.8679859042167664,
+        "joint_4": 0.3239348828792572,
+        "joint_5": 1.175024151802063,
+        "joint_6": -0.398842990398407
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7619345560669899
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7219772562384605
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12725591659545898
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2654809504747391
+        }
+      ]
+    },
+    {
+      "step": 30,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 20,
+      "queue_len_after": 19,
+      "obs_image": "images/step_030_obs.png",
+      "after_image": "images/step_030_after.png",
+      "state_before": {
+        "joint_1": -0.021140668229746,
+        "joint_2": 1.124252940379548,
+        "joint_3": 0.8553292892682277,
+        "joint_4": 0.28764286129228117,
+        "joint_5": 1.2101433040490794,
+        "joint_6": -0.35393301411101324
+      },
+      "state_after": {
+        "joint_1": -0.04118024216669193,
+        "joint_2": 1.1051556391982127,
+        "joint_3": 0.8512093506272475,
+        "joint_4": 0.280418301763275,
+        "joint_5": 1.2008889569343484,
+        "joint_6": -0.2965329505805267
+      },
+      "action": {
+        "joint_1": -0.12223991751670837,
+        "joint_2": 1.0028133392333984,
+        "joint_3": 0.825299859046936,
+        "joint_4": 0.25052088499069214,
+        "joint_5": 1.1617021560668945,
+        "joint_6": -0.056573182344436646
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7325019687414169
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7342474311590195
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11776667088270187
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2644462510943413
+        }
+      ]
+    },
+    {
+      "step": 31,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 19,
+      "queue_len_after": 18,
+      "obs_image": "images/step_031_obs.png",
+      "after_image": "images/step_031_after.png",
+      "state_before": {
+        "joint_1": -0.04118024216669193,
+        "joint_2": 1.1051556391982127,
+        "joint_3": 0.8512093506272475,
+        "joint_4": 0.280418301763275,
+        "joint_5": 1.2008889569343484,
+        "joint_6": -0.2965329505805267
+      },
+      "state_after": {
+        "joint_1": -0.05474347532709519,
+        "joint_2": 1.0885182751560782,
+        "joint_3": 0.8429369888926705,
+        "joint_4": 0.26965740805980937,
+        "joint_5": 1.196227830354418,
+        "joint_6": -0.2727837077218037
+      },
+      "action": {
+        "joint_1": -0.10025179386138916,
+        "joint_2": 1.0306429862976074,
+        "joint_3": 0.8127722144126892,
+        "joint_4": 0.22524428367614746,
+        "joint_5": 1.1772269010543823,
+        "joint_6": -0.17351272702217102
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.6822366267442703
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6579832881689072
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11260155588388443
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.263165682554245
+        }
+      ]
+    },
+    {
+      "step": 32,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 18,
+      "queue_len_after": 17,
+      "obs_image": "images/step_032_obs.png",
+      "after_image": "images/step_032_after.png",
+      "state_before": {
+        "joint_1": -0.05474347532709519,
+        "joint_2": 1.0885182751560782,
+        "joint_3": 0.8429369888926705,
+        "joint_4": 0.26965740805980937,
+        "joint_5": 1.196227830354418,
+        "joint_6": -0.2727837077218037
+      },
+      "state_after": {
+        "joint_1": -0.06733966646884053,
+        "joint_2": 1.0715408650438625,
+        "joint_3": 0.8273125888195006,
+        "joint_4": 0.2672754143975139,
+        "joint_5": 1.1924126281845362,
+        "joint_6": -0.20742007472712437
+      },
+      "action": {
+        "joint_1": -0.1208885908126831,
+        "joint_2": 0.9893481731414795,
+        "joint_3": 0.7571173906326294,
+        "joint_4": 0.2576206922531128,
+        "joint_5": 1.1760486364364624,
+        "joint_6": 0.06582769006490707
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7698321714997292
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7210869118571281
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.1245131716132164
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.25444943457841873
+        }
+      ]
+    },
+    {
+      "step": 33,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 17,
+      "queue_len_after": 16,
+      "obs_image": "images/step_033_obs.png",
+      "after_image": "images/step_033_after.png",
+      "state_before": {
+        "joint_1": -0.06733966646884053,
+        "joint_2": 1.0715408650438625,
+        "joint_3": 0.8273125888195006,
+        "joint_4": 0.2672754143975139,
+        "joint_5": 1.1924126281845362,
+        "joint_6": -0.20742007472712437
+      },
+      "state_after": {
+        "joint_1": -0.07818372722946124,
+        "joint_2": 1.0354162409776182,
+        "joint_3": 0.7841862086244618,
+        "joint_4": 0.2531412389740376,
+        "joint_5": 1.1910338460111176,
+        "joint_6": -0.13999603095395657
+      },
+      "action": {
+        "joint_1": -0.12201758474111557,
+        "joint_2": 0.8272191286087036,
+        "joint_3": 0.5809503197669983,
+        "joint_4": 0.1949743628501892,
+        "joint_5": 1.1837419271469116,
+        "joint_6": 0.14185452461242676
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.750209204852581
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6849711537361145
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12687407433986664
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2688402310013771
+        }
+      ]
+    },
+    {
+      "step": 34,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 16,
+      "queue_len_after": 15,
+      "obs_image": "images/step_034_obs.png",
+      "after_image": "images/step_034_after.png",
+      "state_before": {
+        "joint_1": -0.07818372722946124,
+        "joint_2": 1.0354162409776182,
+        "joint_3": 0.7841862086244618,
+        "joint_4": 0.2531412389740376,
+        "joint_5": 1.1910338460111176,
+        "joint_6": -0.13999603095395657
+      },
+      "state_after": {
+        "joint_1": -0.09902399940601107,
+        "joint_2": 0.9875295874149486,
+        "joint_3": 0.7180951135079766,
+        "joint_4": 0.2511987942225287,
+        "joint_5": 1.1936080952634365,
+        "joint_6": -0.07961807713234854
+      },
+      "action": {
+        "joint_1": -0.203639417886734,
+        "joint_2": 0.7647342085838318,
+        "joint_3": 0.43344658613204956,
+        "joint_4": 0.2422337532043457,
+        "joint_5": 1.2041053771972656,
+        "joint_6": 0.1727825105190277
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 1.0754819959402084
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 2.4047475308179855
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.19546132534742355
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.40244031697511673
+        }
+      ]
+    },
+    {
+      "step": 35,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 15,
+      "queue_len_after": 14,
+      "obs_image": "images/step_035_obs.png",
+      "after_image": "images/step_035_after.png",
+      "state_before": {
+        "joint_1": -0.09902399940601107,
+        "joint_2": 0.9875295874149486,
+        "joint_3": 0.7180951135079766,
+        "joint_4": 0.2511987942225287,
+        "joint_5": 1.1936080952634365,
+        "joint_6": -0.07961807713234854
+      },
+      "state_after": {
+        "joint_1": -0.13690941471904064,
+        "joint_2": 0.9490428197232548,
+        "joint_3": 0.6374914726605775,
+        "joint_4": 0.246699988249204,
+        "joint_5": 1.199301928949792,
+        "joint_6": -0.04757677086703015
+      },
+      "action": {
+        "joint_1": -0.3206423819065094,
+        "joint_2": 0.8028109073638916,
+        "joint_3": 0.30697035789489746,
+        "joint_4": 0.22540947794914246,
+        "joint_5": 1.2239623069763184,
+        "joint_6": 0.08636651933193207
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.9205201640725136
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.7695380374789238
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.15251431614160538
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.26887375861406326
+        }
+      ]
+    },
+    {
+      "step": 36,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 14,
+      "queue_len_after": 13,
+      "obs_image": "images/step_036_obs.png",
+      "after_image": "images/step_036_after.png",
+      "state_before": {
+        "joint_1": -0.13690941471904064,
+        "joint_2": 0.9490428197232548,
+        "joint_3": 0.6374914726605775,
+        "joint_4": 0.246699988249204,
+        "joint_5": 1.199301928949792,
+        "joint_6": -0.04757677086703015
+      },
+      "state_after": {
+        "joint_1": -0.16198433751953398,
+        "joint_2": 0.890383364162314,
+        "joint_3": 0.5454609657428612,
+        "joint_4": 0.21466176792809402,
+        "joint_5": 1.2253084127049092,
+        "joint_6": -0.018393026749093815
+      },
+      "action": {
+        "joint_1": -0.23560969531536102,
+        "joint_2": 0.579485297203064,
+        "joint_3": 0.1392878144979477,
+        "joint_4": 0.08368164300918579,
+        "joint_5": 1.3347570896148682,
+        "joint_6": 0.10359268635511398
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.727788545191288
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6762912273406982
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12734904885292053
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2615228295326233
+        }
+      ]
+    },
+    {
+      "step": 37,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 13,
+      "queue_len_after": 12,
+      "obs_image": "images/step_037_obs.png",
+      "after_image": "images/step_037_after.png",
+      "state_before": {
+        "joint_1": -0.16198433751953398,
+        "joint_2": 0.890383364162314,
+        "joint_3": 0.5454609657428612,
+        "joint_4": 0.21466176792809402,
+        "joint_5": 1.2253084127049092,
+        "joint_6": -0.018393026749093815
+      },
+      "state_after": {
+        "joint_1": -0.16470658434664895,
+        "joint_2": 0.7999959275400578,
+        "joint_3": 0.44714913216359126,
+        "joint_4": 0.18293555868137507,
+        "joint_5": 1.2520010536040174,
+        "joint_6": 0.043959176048744365
+      },
+      "action": {
+        "joint_1": -0.14558586478233337,
+        "joint_2": 0.36421045660972595,
+        "joint_3": 0.01907668262720108,
+        "joint_4": 0.05375494435429573,
+        "joint_5": 1.365188717842102,
+        "joint_6": 0.3046077489852905
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7090158760547638
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.697898842394352
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.1177685335278511
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.28564129024744034
+        }
+      ]
+    },
+    {
+      "step": 38,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 12,
+      "queue_len_after": 11,
+      "obs_image": "images/step_038_obs.png",
+      "after_image": "images/step_038_after.png",
+      "state_before": {
+        "joint_1": -0.16470658434664895,
+        "joint_2": 0.7999959275400578,
+        "joint_3": 0.44714913216359126,
+        "joint_4": 0.18293555868137507,
+        "joint_5": 1.2520010536040174,
+        "joint_6": 0.043959176048744365
+      },
+      "state_after": {
+        "joint_1": -0.1623776189394508,
+        "joint_2": 0.7031268739947136,
+        "joint_3": 0.3568939701076698,
+        "joint_4": 0.15601834894727876,
+        "joint_5": 1.2667341081250088,
+        "joint_6": 0.09440733741378665
+      },
+      "action": {
+        "joint_1": -0.15364894270896912,
+        "joint_2": 0.30963557958602905,
+        "joint_3": -0.011252453550696373,
+        "joint_4": 0.043437421321868896,
+        "joint_5": 1.3316442966461182,
+        "joint_6": 0.30529484152793884
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.6928332149982452
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.659042201936245
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11659599840641022
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.270867720246315
+        }
+      ]
+    },
+    {
+      "step": 39,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 11,
+      "queue_len_after": 10,
+      "obs_image": "images/step_039_obs.png",
+      "after_image": "images/step_039_after.png",
+      "state_before": {
+        "joint_1": -0.1623776189394508,
+        "joint_2": 0.7031268739947136,
+        "joint_3": 0.3568939701076698,
+        "joint_4": 0.15601834894727876,
+        "joint_5": 1.2667341081250088,
+        "joint_6": 0.09440733741378665
+      },
+      "state_after": {
+        "joint_1": -0.15942227306386617,
+        "joint_2": 0.6015465531540612,
+        "joint_3": 0.27979024424006943,
+        "joint_4": 0.12542883396560306,
+        "joint_5": 1.2822606034628703,
+        "joint_6": 0.15263381013575425
+      },
+      "action": {
+        "joint_1": -0.14697006344795227,
+        "joint_2": 0.16909068822860718,
+        "joint_3": -0.0409078523516655,
+        "joint_4": -0.002368014305830002,
+        "joint_5": 1.3501362800598145,
+        "joint_6": 0.3960396647453308
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7509198039770126
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.691785641014576
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.13125594705343246
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.26130955666303635
+        }
+      ]
+    },
+    {
+      "step": 40,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 10,
+      "queue_len_after": 9,
+      "obs_image": "images/step_040_obs.png",
+      "after_image": "images/step_040_after.png",
+      "state_before": {
+        "joint_1": -0.15942227306386617,
+        "joint_2": 0.6015465531540612,
+        "joint_3": 0.27979024424006943,
+        "joint_4": 0.12542883396560306,
+        "joint_5": 1.2822606034628703,
+        "joint_6": 0.15263381013575425
+      },
+      "state_after": {
+        "joint_1": -0.16288300378562542,
+        "joint_2": 0.5002318501941269,
+        "joint_3": 0.22119942864415618,
+        "joint_4": 0.10283801732969496,
+        "joint_5": 1.2766831400220935,
+        "joint_6": 0.1839532430085431
+      },
+      "action": {
+        "joint_1": -0.18209399282932281,
+        "joint_2": 0.09483734518289566,
+        "joint_3": -0.013415120542049408,
+        "joint_4": 0.007888838648796082,
+        "joint_5": 1.25630784034729,
+        "joint_6": 0.3148755431175232
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7244059816002846
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.662272959947586
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11988356709480286
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2634553238749504
+        }
+      ]
+    },
+    {
+      "step": 41,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 9,
+      "queue_len_after": 8,
+      "obs_image": "images/step_041_obs.png",
+      "after_image": "images/step_041_after.png",
+      "state_before": {
+        "joint_1": -0.16288300378562542,
+        "joint_2": 0.5002318501941269,
+        "joint_3": 0.22119942864415618,
+        "joint_4": 0.10283801732969496,
+        "joint_5": 1.2766831400220935,
+        "joint_6": 0.1839532430085431
+      },
+      "state_after": {
+        "joint_1": -0.16535330924938996,
+        "joint_2": 0.3836953709048198,
+        "joint_3": 0.17307486438955375,
+        "joint_4": 0.0725757121659778,
+        "joint_5": 1.262477186650056,
+        "joint_6": 0.2173239433361518
+      },
+      "action": {
+        "joint_1": -0.17421123385429382,
+        "joint_2": -0.1434118151664734,
+        "joint_3": -0.040098801255226135,
+        "joint_4": -0.053625233471393585,
+        "joint_5": 1.2044975757598877,
+        "joint_6": 0.3568233549594879
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7500108331441879
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6491319984197617
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12510549277067184
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2650851383805275
+        }
+      ]
+    },
+    {
+      "step": 42,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 8,
+      "queue_len_after": 7,
+      "obs_image": "images/step_042_obs.png",
+      "after_image": "images/step_042_after.png",
+      "state_before": {
+        "joint_1": -0.16535330924938996,
+        "joint_2": 0.3836953709048198,
+        "joint_3": 0.17307486438955375,
+        "joint_4": 0.0725757121659778,
+        "joint_5": 1.262477186650056,
+        "joint_6": 0.2173239433361518
+      },
+      "state_after": {
+        "joint_1": -0.16903466618627838,
+        "joint_2": 0.27390164552086166,
+        "joint_3": 0.11819170896304024,
+        "joint_4": 0.05502143129255337,
+        "joint_5": 1.2518976937127861,
+        "joint_6": 0.23796589774743632
+      },
+      "action": {
+        "joint_1": -0.1831180453300476,
+        "joint_2": -0.15654286742210388,
+        "joint_3": -0.09827429056167603,
+        "joint_4": -0.017902836203575134,
+        "joint_5": 1.2114245891571045,
+        "joint_6": 0.32425326108932495
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.9693354368209839
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 2.371080219745636
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.18191244453191757
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.4016915336251259
+        }
+      ]
+    },
+    {
+      "step": 43,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 7,
+      "queue_len_after": 6,
+      "obs_image": "images/step_043_obs.png",
+      "after_image": "images/step_043_after.png",
+      "state_before": {
+        "joint_1": -0.16903466618627838,
+        "joint_2": 0.27390164552086166,
+        "joint_3": 0.11819170896304024,
+        "joint_4": 0.05502143129255337,
+        "joint_5": 1.2518976937127861,
+        "joint_6": 0.23796589774743632
+      },
+      "state_after": {
+        "joint_1": -0.18509150673458316,
+        "joint_2": 0.17493353435294381,
+        "joint_3": 0.06296057394533856,
+        "joint_4": 0.043746481911980016,
+        "joint_5": 1.2461405141075983,
+        "joint_6": 0.28935746875851587
+      },
+      "action": {
+        "joint_1": -0.2530815005302429,
+        "joint_2": -0.22387507557868958,
+        "joint_3": -0.1605663150548935,
+        "joint_4": -0.003501472994685173,
+        "joint_5": 1.2250195741653442,
+        "joint_6": 0.5041956305503845
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.982050783932209
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 2.328699454665184
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.177113339304924
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.39492733776569366
+        }
+      ]
+    },
+    {
+      "step": 44,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 6,
+      "queue_len_after": 5,
+      "obs_image": "images/step_044_obs.png",
+      "after_image": "images/step_044_after.png",
+      "state_before": {
+        "joint_1": -0.18509150673458316,
+        "joint_2": 0.17493353435294381,
+        "joint_3": 0.06296057394533856,
+        "joint_4": 0.043746481911980016,
+        "joint_5": 1.2461405141075983,
+        "joint_6": 0.28935746875851587
+      },
+      "state_after": {
+        "joint_1": -0.2006655822736849,
+        "joint_2": 0.07453282105782098,
+        "joint_3": 0.006562135990027746,
+        "joint_4": 0.03727880027328018,
+        "joint_5": 1.2437154164694608,
+        "joint_6": 0.3398950013490733
+      },
+      "action": {
+        "joint_1": -0.26391342282295227,
+        "joint_2": -0.3567742109298706,
+        "joint_3": -0.23230960965156555,
+        "joint_4": 0.011021511629223824,
+        "joint_5": 1.235444188117981,
+        "joint_6": 0.5511561036109924
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7369574159383774
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6961460933089256
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.1403670758008957
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.29729120433330536
+        }
+      ]
+    },
+    {
+      "step": 45,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 5,
+      "queue_len_after": 4,
+      "obs_image": "images/step_045_obs.png",
+      "after_image": "images/step_045_after.png",
+      "state_before": {
+        "joint_1": -0.2006655822736849,
+        "joint_2": 0.07453282105782098,
+        "joint_3": 0.006562135990027746,
+        "joint_4": 0.03727880027328018,
+        "joint_5": 1.2437154164694608,
+        "joint_6": 0.3398950013490733
+      },
+      "state_after": {
+        "joint_1": -0.21168994213854572,
+        "joint_2": -0.007495844731679982,
+        "joint_3": -0.03331217834295058,
+        "joint_4": 0.028283692533744225,
+        "joint_5": 1.2361629098150673,
+        "joint_6": 0.37089192109113694
+      },
+      "action": {
+        "joint_1": -0.25680261850357056,
+        "joint_2": -0.2782691717147827,
+        "joint_3": -0.17082467675209045,
+        "joint_4": -0.008724257349967957,
+        "joint_5": 1.2094756364822388,
+        "joint_6": 0.5004645586013794
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7280968129634857
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.671135425567627
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11352263391017914
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2563139423727989
+        }
+      ]
+    },
+    {
+      "step": 46,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 4,
+      "queue_len_after": 3,
+      "obs_image": "images/step_046_obs.png",
+      "after_image": "images/step_046_after.png",
+      "state_before": {
+        "joint_1": -0.21168994213854572,
+        "joint_2": -0.007495844731679982,
+        "joint_3": -0.03331217834295058,
+        "joint_4": 0.028283692533744225,
+        "joint_5": 1.2361629098150673,
+        "joint_6": 0.37089192109113694
+      },
+      "state_after": {
+        "joint_1": -0.22177845317637854,
+        "joint_2": -0.07921452704119436,
+        "joint_3": -0.05331506640985146,
+        "joint_4": 0.01840894617294788,
+        "joint_5": 1.2216169230309013,
+        "joint_6": 0.3845791025944113
+      },
+      "action": {
+        "joint_1": -0.2638177275657654,
+        "joint_2": -0.3645714521408081,
+        "joint_3": -0.13032686710357666,
+        "joint_4": -0.022572455927729607,
+        "joint_5": 1.162506103515625,
+        "joint_6": 0.441792368888855
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7824348285794258
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6935262829065323
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11879298835992813
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2773189917206764
+        }
+      ]
+    },
+    {
+      "step": 47,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 3,
+      "queue_len_after": 2,
+      "obs_image": "images/step_047_obs.png",
+      "after_image": "images/step_047_after.png",
+      "state_before": {
+        "joint_1": -0.22177845317637854,
+        "joint_2": -0.07921452704119436,
+        "joint_3": -0.05331506640985146,
+        "joint_4": 0.01840894617294788,
+        "joint_5": 1.2216169230309013,
+        "joint_6": 0.3845791025944113
+      },
+      "state_after": {
+        "joint_1": -0.23249642039512283,
+        "joint_2": -0.13244267855070882,
+        "joint_3": -0.0657468139102055,
+        "joint_4": -0.00016863010863427238,
+        "joint_5": 1.2093497963820319,
+        "joint_6": 0.3875032438254465
+      },
+      "action": {
+        "joint_1": -0.2772311866283417,
+        "joint_2": -0.3027437925338745,
+        "joint_3": -0.09710812568664551,
+        "joint_4": -0.07767820358276367,
+        "joint_5": 1.1612051725387573,
+        "joint_6": 0.3997246026992798
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7697772234678268
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6607334837317467
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.11635664850473404
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.296945683658123
+        }
+      ]
+    },
+    {
+      "step": 48,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 2,
+      "queue_len_after": 1,
+      "obs_image": "images/step_048_obs.png",
+      "after_image": "images/step_048_after.png",
+      "state_before": {
+        "joint_1": -0.23249642039512283,
+        "joint_2": -0.13244267855070882,
+        "joint_3": -0.0657468139102055,
+        "joint_4": -0.00016863010863427238,
+        "joint_5": 1.2093497963820319,
+        "joint_6": 0.3875032438254465
+      },
+      "state_after": {
+        "joint_1": -0.24111206948317182,
+        "joint_2": -0.17995347948314946,
+        "joint_3": -0.0544348589405779,
+        "joint_4": -0.022785796171660155,
+        "joint_5": 1.194099342257507,
+        "joint_6": 0.398589793736052
+      },
+      "action": {
+        "joint_1": -0.2771105468273163,
+        "joint_2": -0.362551212310791,
+        "joint_3": 0.00015880167484283447,
+        "joint_4": -0.11720094084739685,
+        "joint_5": 1.1316766738891602,
+        "joint_6": 0.44493624567985535
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.7473602890968323
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.6916673630475998
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.12169312685728073
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2669133245944977
+        }
+      ]
+    },
+    {
+      "step": 49,
+      "scene_check_only": false,
+      "generated_chunk": false,
+      "queue_len_before": 1,
+      "queue_len_after": 0,
+      "obs_image": "images/step_049_obs.png",
+      "after_image": "images/step_049_after.png",
+      "state_before": {
+        "joint_1": -0.24111206948317182,
+        "joint_2": -0.17995347948314946,
+        "joint_3": -0.0544348589405779,
+        "joint_4": -0.022785796171660155,
+        "joint_5": 1.194099342257507,
+        "joint_6": 0.398589793736052
+      },
+      "state_after": {
+        "joint_1": -0.23657494399161202,
+        "joint_2": -0.2089603193692544,
+        "joint_3": -0.04720016929768232,
+        "joint_4": -0.04736495797422194,
+        "joint_5": 1.180970202598424,
+        "joint_6": 0.40757309131415637
+      },
+      "action": {
+        "joint_1": -0.21647042036056519,
+        "joint_2": -0.2906140089035034,
+        "joint_3": -0.0019689276814460754,
+        "joint_4": -0.1498795449733734,
+        "joint_5": 1.1280401945114136,
+        "joint_6": 0.4451265335083008
+      },
+      "action_chunk": null,
+      "stages": [
+        {
+          "name": "render",
+          "detail": "Capture MuJoCo camera inputs and joint state."
+        },
+        {
+          "name": "preprocess",
+          "detail": "Build the policy frame and batch tensors.",
+          "duration_ms": 0.750439241528511
+        },
+        {
+          "name": "policy",
+          "detail": "Generate or dequeue one SmolVLA action.",
+          "duration_ms": 1.68654415756464
+        },
+        {
+          "name": "postprocess",
+          "detail": "Unnormalize the action and map it to named joints.",
+          "duration_ms": 0.1168958842754364
+        },
+        {
+          "name": "mujoco",
+          "detail": "Apply the action and step the simulator.",
+          "duration_ms": 0.2831052988767624
+        }
+      ]
+    }
+  ]
+}
